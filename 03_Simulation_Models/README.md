@@ -2,7 +2,7 @@
 
 This folder contains a few simulation models I have created for various Bosch Rexroth material handling systems and intralogistics applications. These models demonstrate advanced simulation capabilities including system behavior analysis, optimizing resource and evaluation of cycle times and technical configurations.
 
-## ActiveShuttle AMR Simulation
+## 1. ActiveShuttle AMR Simulation
 
 Simulation models for Bosch Rexroth ActiveShuttle AMR systems for flexible and efficient material flow in production and logistics environments.
 
@@ -33,7 +33,7 @@ Simulation models for Bosch Rexroth ActiveShuttle AMR systems for flexible and e
 - System throughput analysis and bottleneck identification
 - Traffic management and optimization strategies
 
-## Battery Discharge Simulation
+## 2. Battery Discharge Simulation
 Modelled a battery discharge layout and exported process flow videos for visualization.
 
 <div align="center">
@@ -46,7 +46,7 @@ Modelled a battery discharge layout and exported process flow videos for visuali
 
 <br>
 
-# Sorting System Design
+## 3. Sorting System Design
 
 Evaluation of three design approaches for an efficient sorting system that handles mixed product flow from multiple sources and ensures single product-type output on each conveyor line.
 
