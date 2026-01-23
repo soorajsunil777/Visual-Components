@@ -1,8 +1,5 @@
 # Transfer System (TS1 Evo) Component Library
-
-This folder documents the development of the TS1 Evo (Transfer System 1 Evolution) component library for Bosch Rexroth modular conveyor systems. The TS1 Evo system represents the next generation of the TS1 series with enhanced features and improved performance characteristics.
-
----
+This folder documents the development of the TS1 Evo (Transfer System 1) component library for Bosch Rexroth modular conveyor systems. 
 
 ## Component Modelling
 
@@ -23,7 +20,7 @@ The component modeling process involved systematic design and implementation of 
 </div>
 
 <div align="center">
-  <i>Figure 2: TS1 Evo Curve KU1_90-E R1 (90° curve module)</i>
+  <i>Figure 2: TS1 Evo Curve KU1 90-E R1 (90° curve module)</i>
 </div>
 
 <br>
@@ -33,7 +30,7 @@ The component modeling process involved systematic design and implementation of 
 </div>
 
 <div align="center">
-  <i>Figure 3: TS1 Evo Curve KU1_180 R1 (180° curve module)</i>
+  <i>Figure 3: TS1 Evo Curve KU1 180 R1 (180° curve module)</i>
 </div>
 
 <br>
@@ -43,5 +40,5 @@ The component modeling process involved systematic design and implementation of 
 </div>
 
 <div align="center">
-  <i>Figure 4: TS1 Evo Lift Transverse Unit HQ1_U-E</i>
+  <i>Figure 4: TS1 Evo Lift Transverse Unit HQ1 U-E</i>
 </div>

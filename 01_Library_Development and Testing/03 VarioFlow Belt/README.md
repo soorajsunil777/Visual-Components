@@ -1,8 +1,6 @@
 # VarioFlow Belt Component Library
 
-This folder documents the development and testing of the VarioFlow Belt component library for Bosch Rexroth modular conveyor systems. The VarioFlow system comprises belt conveyors, curves, transitions, and accessories designed for flexible material handling solutions in factory automation.
-
----
+This folder documents the development and testing of the VarioFlow Belt component library for Bosch Rexroth modular conveyor systems. The VarioFlow system comprises Conveyor sections, drives, return units, curves, and accessories designed for flexible material handling solutions in factory automation.
 
 ## Component Modelling
 
@@ -50,7 +48,7 @@ The component modeling process involved systematic design and implementation of 
 
 <br>
 
-## Testing
+## Library Testing
 
 Comprehensive testing was conducted to validate component functionality, interface behavior, and system integration. Visual testing models demonstrate component behavior and system-level integration scenarios.
 
