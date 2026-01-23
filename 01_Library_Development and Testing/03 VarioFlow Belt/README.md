@@ -38,13 +38,38 @@ The component modeling process involved systematic design and implementation of 
 
 <br>
 
-<div align="center">
-  <img src="Geometry%20optimization.png" alt="Geometry Optimization" width="550"/>
-</div>
 
-<div align="center">
-  <i>Figure 2: Geometry optimization</i>
-</div>
+<br>
+
+### Triangle Reduction in Geometries
+
+```
++------------------+------------------+-----------------+--------------------------+
+| Component        | Triangles Before | Triangles After | % Reduction in triangles |
++------------------+------------------+-----------------+--------------------------+
+| Drive Unit       |            37721 |            6098 |                      84% |
+| Return Unit      |            13226 |            2028 |                      85% |
+| Section          |            14499 |            2351 |                      84% |
+| Legset           |            19180 |            4671 |                      76% |
+| Curve Horizontal |            26936 |            8282 |                      69% |
+| Curve Vertical   |            31983 |            7645 |                      76% |
++------------------+------------------+-----------------+--------------------------+
+```
+
+### Component File Size Reduction
+
+```
++------------------+----------------------------+---------------------------+---------------------+
+| Component        | Component size before (KB) | Component size after (KB) | % Reduction in size |
++------------------+----------------------------+---------------------------+---------------------+
+| Drive Unit       |                       1301 |                       360 |                 72% |
+| Return Unit      |                        386 |                       197 |                 49% |
+| Section          |                        399 |                       221 |                 45% |
+| Legset           |                        725 |                       346 |                 52% |
+| Curve Horizontal |                       2508 |                       765 |                 69% |
+| Curve Vertical   |                       3941 |                      1327 |                 66% |
++------------------+----------------------------+---------------------------+---------------------+
+```
 
 <br>
 
