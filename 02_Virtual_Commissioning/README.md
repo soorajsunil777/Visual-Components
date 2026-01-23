@@ -1,8 +1,10 @@
 # Virtual Commissioning
 
-This folder contains virtual commissioning work for Rexroth Transfer System TS2, integrating Visual Components simulation models with PLC control logic. The work establishes a standardized framework through systematic data evaluation, development environment definition, and proof-of-concept implementation with operational PLC function blocks for selected material flow scenarios, which was then generalized and expanded across the entire TS2 library.
+This folder contains virtual commissioning work for Rexroth Transfer System TS2, integrating Visual Components simulation models with PLC control logic. 
 
-## Technologies Used
+The work establishes a standardized framework through systematic data evaluation, development environment definition, and proof-of-concept implementation with operational PLC function blocks for selected material flow scenarios, which was then generalized and expanded across the entire TS2 library.
+
+### Technologies Used:
 
 - **Simulation Platform:** Visual Components 4.10
 - **PLC Programming:** Structured Text (IEC 61131-3) ctrlX PLC Engineering
@@ -22,16 +24,42 @@ demonstrations
   <i>Figure 1: Virtual commissioning development overview and workflow</i>
 </div>
 
-<br>
 
-<div align="center">
-  <img src="Simulation Object.png" alt="Simulation Object Architecture" width="550"/>
-</div>
-
-<div align="center">
-  <i>Figure 2: Simulation object architecture for virtual commissioning integration</i>
-</div>
-
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│ WP1: Software Environment                                               │
+│ • Virtual crlX, OPC Server App, OPC Connection Visual Components        │
+│ • Development environment                                               │
+└──────────────────────────────────┬──────────────────────────────────────┘
+                                   │
+                                   ↓
+┌─────────────────────────────────────────────────────────────────────────┐
+│ WP2: Simulation Objects                                                 │
+│ • List of components, variables, properties                             │
+│ • Evaluate Python code (Internal component mechanism)                   │
+└──────────────────────────────────┬──────────────────────────────────────┘
+                                   │
+                                   ↓
+┌─────────────────────────────────────────────────────────────────────────┐
+│ WP3: Screening Product Documentation                                    │
+│ • I/O signals, Sequence of actions, Node Variances (Basic and extended) │
+│                                                                         │
+└──────────────────────────────────┬──────────────────────────────────────┘
+                                   │
+                                   ↓
+┌─────────────────────────────────────────────────────────────────────────┐
+│ WP4: Simulation Objects Visual Components Evaluation                    │
+│ • Comparison of I/O signals and simulation variables, comparison of     │
+│   sequence of actions with simulation mechanism                         │          
+└──────────────────────────────────┬──────────────────────────────────────┘
+                                   │
+                                   ↓
+┌─────────────────────────────────────────────────────────────────────────┐
+│ WP5: Demonstrator                                                       │
+│ • Layout definition (TFE1, TFE2, TFE3, TFE4 etc.), PLC coding           │
+│                                                                         │
+└─────────────────────────────────────────────────────────────────────────┘
+```
 ## PLC Code
 
 Structured Text (ST) control programs for various Transfer Element configurations, implementing function plan control logic for automated material handling operations.
