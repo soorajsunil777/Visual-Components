@@ -10,7 +10,10 @@ The component modeling process involved systematic design and implementation of 
 
 <div align="center">
   <img src="Component%20Modelling/Development%20Overview.png" alt="Development Overview" width="550"/>
-  <br><i>Figure 1: Component library development overview and methodology</i>
+</div>
+
+<div align="center">
+  <i>Figure 1: Component library development overview and methodology</i>
 </div>
 
 <div align="center">
@@ -43,7 +46,10 @@ The component modeling process involved systematic design and implementation of 
 
 <div align="center">
   <img src="Component%20Modelling/Component%20modelling9.png" alt="Component Modelling 9" width="550"/>
-  <br><i>Figure 2-9: TS1 Components</i>
+</div>
+
+<div align="center">
+  <i>Figure 2-9: TS1 Components</i>
 </div>
 
 ## Testing
