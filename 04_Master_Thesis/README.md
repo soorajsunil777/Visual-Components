@@ -1,10 +1,8 @@
-# Master Thesis - Dynamic Data Exchange Framework for Visual Components
+## Master Thesis - Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic components of Transfer Systems
 
 This folder contains research and implementation work from the master thesis focused on developing a dynamic data exchange framework for Visual Components simulation platform. The work addresses the challenge of efficient information flow between Visual Components and external systems, enabling seamless integration and data interoperability in manufacturing simulation environments.
 
 The research encompasses the development of a model export framework, information flow architecture, and practical demonstration through production system applications. This work contributes to enhancing Visual Components' integration capabilities with enterprise systems and data analysis tools.
-
----
 
 ## Research Overview
 
@@ -136,3 +134,21 @@ Comprehensive research documentation including:
 ---
 
 *This master thesis work represents a significant contribution to manufacturing simulation integration methodologies, providing a practical framework for enhanced data interoperability in Visual Components environments.*
+
+# Master thesis: Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems
+
+## Overview
+This repository contains the research artifacts, models, and prototypes developed within the scope of the Master’s thesis *“Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems”*. The work is conducted in the context of digital production system engineering and focuses on the integration of simulation and electrical engineering workflows.
+
+## Motivation
+Modern production system engineering involves multiple disciplines and tool chains, each relying on domain-specific data models. The lack of harmonized information models leads to manual data exchange, inconsistencies, and limited automation potential. In particular, the generation of electrical documentation from upstream engineering data remains largely tool-specific and error-prone. A common, tool-independent data basis is required to enable automated and reliable engineering workflows.
+
+## Objective
+The objective of this thesis is to evaluate the automated generation of EPLAN electrical artifacts within a digital engineering tool chain. The work applies the DIAMOND Common Data Modelling approach to harmonize data from simulation, system structuring, and electrical engineering domains. By developing and prototypically applying a common information model, the thesis assesses the feasibility, benefits, and limitations of model-based data integration for improving consistency, traceability, and automation in multidisciplinary engineering processes.
+
+## Scope
+The thesis includes:
+- Analysis of domain-specific information models in simulation and electrical engineering  
+- Development of a common data model based on DIAMOND concepts  
+- Prototypical generation of EPLAN-relevant data from upstream engineering models  
+- Evaluation of the approach with respect to engineering effort, data consistency, and automation potential
