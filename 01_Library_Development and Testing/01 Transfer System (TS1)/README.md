@@ -16,6 +16,8 @@ The component modeling process involved systematic design and implementation of 
   <i>Figure 1: Component library development overview and methodology</i>
 </div>
 
+<br>
+
 <div align="center">
   <img src="Component%20Modelling/Component%20modelling1.png" alt="Component Modelling 1" width="550"/>
 </div>
@@ -52,6 +54,8 @@ The component modeling process involved systematic design and implementation of 
   <i>Figure 2-9: TS1 Components</i>
 </div>
 
+<br>
+
 ## Testing
 
 A comprehensive V-Model testing framework was implemented, encompassing unit testing, interface testing, functionality testing, and system-level integration testing. Test documentation is provided in Excel and PDF formats, with visual validation models demonstrating component behavior and system integration.
@@ -64,6 +68,8 @@ A comprehensive V-Model testing framework was implemented, encompassing unit tes
   <i>Figure 10: V-Model testing framework structure and methodology</i>
 </div>
 
+<br>
+
 **Unit testing:** Individual components were tested in isolation to verify functionality and compliance with specification requirements.
 
 <div align="center">
@@ -73,6 +79,8 @@ A comprehensive V-Model testing framework was implemented, encompassing unit tes
 <div align="center">
   <i>Figure 11: Unit testing approach for individual component validation</i>
 </div>
+
+<br>
 
 **Interface testing:** Component interconnections and signal exchanges were validated to ensure seamless integration between adjacent components.
 
@@ -84,6 +92,8 @@ A comprehensive V-Model testing framework was implemented, encompassing unit tes
   <i>Figure 12: Interface testing methodology for component interconnections</i>
 </div>
 
+<br>
+
 <div align="center">
   <img src="Testing/Interface%20Testing%20models.png" alt="Interface Testing Models" width="550"/>
 </div>
@@ -91,6 +101,8 @@ A comprehensive V-Model testing framework was implemented, encompassing unit tes
 <div align="center">
   <i>Figure 13: Interface testing models demonstrating component compatibility</i>
 </div>
+
+<br>
 
 **System testing:** Complete system integration was validated through comprehensive test scenarios to verify functionality and performance.
 
@@ -101,6 +113,8 @@ A comprehensive V-Model testing framework was implemented, encompassing unit tes
 <div align="center">
   <i>Figure 14: System testing</i>
 </div>
+
+<br>
 
 <div align="center">
   <img src="Testing/TS1%20System%20test.gif" alt="TS1 System Test" width="550"/>
