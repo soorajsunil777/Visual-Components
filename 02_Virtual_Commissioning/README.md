@@ -1,149 +1,113 @@
-# Virtual Commissioning Projects
+# Virtual Commissioning
 
-## Overview
-Virtual commissioning solutions using Visual Components for validating automation systems before physical implementation. This approach reduces commissioning time, identifies issues early, and optimizes system performance.
+This folder contains virtual commissioning work for Bosch Rexroth transfer systems, demonstrating the integration between Visual Components simulation models and PLC control logic. Virtual commissioning enables validation of control systems and system behavior in a digital environment before physical deployment, reducing commissioning time and minimizing risks during installation.
 
-## What is Virtual Commissioning?
-Virtual commissioning connects digital twins of manufacturing systems with real control software (PLCs, robots) to validate automation logic in a simulated environment before deployment.
-
-## Key Benefits
-- ✅ Early issue detection and resolution
-- ✅ Reduced on-site commissioning time
-- ✅ Risk mitigation through simulation
-- ✅ Operator training in safe environment
-- ✅ Optimized program logic before deployment
-
-## Technical Approach
-
-### 1. Digital Twin Development
-Creating accurate simulation models:
-- Component geometry and kinematics
-- Realistic behavior implementation
-- Signal mapping and I/O configuration
-- Timing and performance modeling
-
-### 2. Control System Integration
-Connecting simulation to real controls:
-- PLC communication (OPC UA, PLCSIM, etc.)
-- Robot controller integration
-- Field bus simulation
-- HMI connectivity
-
-### 3. Validation & Testing
-Systematic verification process:
-- Logic validation
-- Cycle time verification
-- Safety scenario testing
-- Exception handling
-- Performance optimization
-
-### 4. Documentation & Training
-Knowledge transfer deliverables:
-- System documentation
-- Operator training materials
-- Troubleshooting guides
-- Maintenance procedures
-
-## Virtual Commissioning Workflow
-
-```
-1. Requirements Analysis
-   ↓
-2. Digital Twin Creation
-   ↓
-3. Control System Integration
-   ↓
-4. Logic Validation
-   ↓
-5. Performance Optimization
-   ↓
-6. Documentation & Training
-   ↓
-7. Deployment Support
-```
-
-## Project Examples
-
-### Project Type 1: Assembly Line Commissioning
-- Multi-station assembly system
-- Robot integration
-- Vision system simulation
-- Product tracking
-- Quality control gates
-
-**Key Outcomes:**
-- 40% reduction in commissioning time
-- Early detection of 15+ logic issues
-- Optimized cycle time by 12%
-
-### Project Type 2: Material Handling System
-- Automated conveyor network
-- Sorting and routing logic
-- RFID tracking simulation
-- Buffer management
-- Error recovery scenarios
-
-**Key Outcomes:**
-- Validated complex routing logic
-- Identified bottlenecks pre-deployment
-- Operator training completed before installation
-
-### Project Type 3: Production Cell Validation
-- Flexible manufacturing cell
-- Multiple product variants
-- Tool change sequences
-- Process monitoring
-- Maintenance simulation
-
-**Key Outcomes:**
-- Verified all product variants
-- Optimized tool change strategy
-- Validated maintenance procedures
-
-## Integration Technologies
-
-### PLC Integration
-- Siemens TIA Portal integration
-- Automation Studio connectivity
-- OPC UA communication
-- Virtual PLC simulation
-
-### Robot Integration
-- ABB robot controllers
-- KUKA integration
-- Universal Robots connectivity
-- Robot program validation
-
-### Communication Protocols
-- OPC UA
-- PROFINET simulation
-- EtherNet/IP
-- Modbus TCP
-
-## Challenges & Solutions
-
-### Challenge 1: Real-Time Synchronization
-**Solution:** Implemented time synchronization mechanisms and optimized communication cycles for responsive simulation.
-
-### Challenge 2: Complex Logic Validation
-**Solution:** Developed systematic test scenarios covering normal operation, edge cases, and error conditions.
-
-### Challenge 3: Performance Requirements
-**Solution:** Optimized digital twin complexity balancing accuracy with real-time performance needs.
-
-## Best Practices
-
-1. **Start Early:** Begin virtual commissioning during system design phase
-2. **Iterate Often:** Regular validation cycles catch issues early
-3. **Document Everything:** Maintain clear records of tests and findings
-4. **Involve Stakeholders:** Include operators, programmers, and engineers
-5. **Realistic Scenarios:** Test actual production conditions and edge cases
-
-## Documentation
-- [VC Workflow](./docs/vc-workflow.md)
-- [Simulation Setup](./docs/simulation-setup.md)
-- [PLC Integration](./docs/plc-integration.md)
-- [Case Studies](./case-studies/)
+The work encompasses PLC code development for multiple Transfer Element (TFE) configurations, proof-of-concept demonstration models, and comprehensive documentation of the virtual commissioning workflow for transfer system applications.
 
 ---
-*Case studies present methodologies and outcomes. Specific client information and proprietary details are not disclosed.*
+
+## Overview
+
+Virtual commissioning bridges the gap between mechanical design and control system development, providing a platform for early validation of system behavior, logic verification, and operator training. This approach enables parallel engineering workflows and accelerates time-to-market for automated material handling solutions.
+
+<div align="center">
+  <img src="VCOM Development Overview.png" alt="Virtual Commissioning Development Overview" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 1: Virtual commissioning development overview and workflow</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="Simulation Object.png" alt="Simulation Object Architecture" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 2: Simulation object architecture for virtual commissioning integration</i>
+</div>
+
+<br>
+
+---
+
+## PLC Code
+
+Structured Text (ST) control programs for various Transfer Element configurations, implementing function plan control logic for automated material handling operations.
+
+**Included PLC Programs:**
+- **TFE1 Function plan control.st** - Control logic for single transfer element configuration
+- **TFE3 Function plan control.st** - Control logic for three transfer element system
+- **TFE4 Function plan control.st** - Control logic for four transfer element system
+
+The PLC code implements state-based control sequences, sensor monitoring, actuator control, and interlock management for safe and efficient material transport operations.
+
+---
+
+## PoC Demo Models
+
+Proof-of-concept demonstration models showcasing virtual commissioning capabilities and system behavior validation.
+
+**Demo Visualizations:**
+
+<div align="center">
+  <img src="PoC demo models/VCOM TFE1.gif" alt="TFE1 Virtual Commissioning Demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 3: TFE1 virtual commissioning demonstration - single transfer element operation</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="PoC demo models/VCOM TFE3.gif" alt="TFE3 Virtual Commissioning Demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 4: TFE3 virtual commissioning demonstration - three transfer element system</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="PoC demo models/VCOM TFE4 Combined.gif" alt="TFE4 Virtual Commissioning Demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 5: TFE4 virtual commissioning demonstration - four transfer element integrated system</i>
+</div>
+
+<br>
+
+---
+
+## Documentation
+
+**VCOM_TS2 Demonstrator R0.pdf** - Comprehensive documentation of the virtual commissioning demonstrator implementation, including system architecture, communication protocols, and validation results.
+
+---
+
+## Key Features
+
+- **Digital Twin Integration:** Real-time synchronization between simulation model and PLC control system
+- **Function Plan Control:** Structured implementation of transfer system control sequences
+- **State Machine Logic:** Robust state-based control for reliable material handling operations
+- **Sensor Integration:** Virtual sensor feedback for position detection and zone monitoring
+- **Scalable Architecture:** Modular control structure supporting various system configurations
+- **Early Validation:** Pre-commissioning verification of control logic and system behavior
+
+---
+
+## Technologies Used
+
+- **Simulation Platform:** Visual Components 4.x
+- **PLC Programming:** Structured Text (IEC 61131-3)
+- **Communication:** OPC UA / Signal-based integration
+- **Control Architecture:** Function plan control methodology
+- **Documentation:** Technical reports and visual demonstrations
+
+---
+
+*This work demonstrates practical implementation of virtual commissioning workflows for industrial automation systems, enabling efficient validation and optimization of control systems prior to physical deployment.*
