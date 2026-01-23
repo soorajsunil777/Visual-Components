@@ -103,6 +103,8 @@ A comprehensive V-Model testing framework was implemented, encompassing unit tes
 </div>
 
 <div align="center">
-  <figure>
-    <img src="Testing/TS1%20System%20test.gif" alt="TS1 System Test" width="550"/>
-    <figcaption><i>Figure 15: System testing - TS1 Use Case 
+  <img src="Testing/TS1%20System%20test.gif" alt="TS1 System Test" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 15: System testing - TS1 Use Case 
