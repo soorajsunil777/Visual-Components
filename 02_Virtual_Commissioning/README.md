@@ -11,16 +11,11 @@ The work establishes a standardized framework through systematic data evaluation
 - **Data Layer:** ctrlX AUTOMATION
 - **Communication protocol:** OPC UA / Signal-based integration
 - **Control Architecture:** Function plan control methodology
-demonstrations
 
 
 ---
 
-<div align="center">
-  <img src="VCOM Development Overview.png" alt="Virtual Commissioning Development Overview" width="550"/>
-</div>
-
-<div align="center">
+<div align="left">
   <i>Figure 1: Virtual commissioning development overview and workflow</i>
 </div>
 
@@ -28,7 +23,7 @@ demonstrations
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ WP1: Software Environment                                               │
-│ • Virtual crlX, OPC Server App, OPC Connection Visual Components        │
+│ • Virtual crlX, OPC UA Server App, OPC UA Connection Visual Components  │
 │ • Development environment                                               │
 └──────────────────────────────────┬──────────────────────────────────────┘
                                    │
@@ -50,25 +45,22 @@ demonstrations
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ WP4: Simulation Objects Visual Components Evaluation                    │
 │ • Comparison of I/O signals and simulation variables, comparison of     │
-│   sequence of actions with simulation mechanism                         │          
+│   sequence of actions with simulation mechanism                         │
+│ • Modification of components:adding additional attributes and behaviours│ 
+│   to mimic the real life counterpart of the system.                     │          
 └──────────────────────────────────┬──────────────────────────────────────┘
                                    │
                                    ↓
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ WP5: Demonstrator                                                       │
-│ • Layout definition (TFE1, TFE2, TFE3, TFE4 etc.), PLC coding           │
+│ • Layout definition (TFE1, TFE2, TFE3, TFE4 etc.), Configurable PLC FBs │
 │                                                                         │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
-## PLC Code
 
-Structured Text (ST) control programs for various Transfer Element configurations, implementing function plan control logic for automated material handling operations.
+## PoC Demostrator Models
 
-The PLC code implements state-based control sequences, sensor monitoring, actuator control, and interlock management for safe and efficient material transport operations.
-
-## PoC Demo Models
-
-Proof-of-concept demonstration models showcasing virtual commissioning capabilities and system behavior validation.
+Proof-of-concept Virtual Commissioning demonstration models showcasing virtual commissioning capabilities and system behavior validation.
 
 **Demonstrator Visualizations:**
 
