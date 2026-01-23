@@ -57,44 +57,49 @@ The component modeling process involved systematic design and implementation of 
 A comprehensive V-Model testing framework was implemented, encompassing unit testing, interface testing, functionality testing, and system-level integration testing. Test documentation is provided in Excel and PDF formats, with visual validation models demonstrating component behavior and system integration.
 
 <div align="center">
-  <figure>
-    <img src="Testing/V-Model%20testing%20framework.png" alt="V-Model Testing Framework" width="550"/>
-    <figcaption><i>Figure 10: V-Model testing framework structure and methodology</i></figcaption>
-  </figure>
+  <img src="Testing/V-Model%20testing%20framework.png" alt="V-Model Testing Framework" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 10: V-Model testing framework structure and methodology</i>
 </div>
 
 **Unit testing:** Individual components were tested in isolation to verify functionality and compliance with specification requirements.
 
 <div align="center">
-  <figure>
-    <img src="Testing/UnitTesting.png" alt="Unit Testing" width="550"/>
-    <figcaption><i>Figure 11: Unit testing approach for individual component validation</i></figcaption>
-  </figure>
+  <img src="Testing/UnitTesting.png" alt="Unit Testing" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 11: Unit testing approach for individual component validation</i>
 </div>
 
 **Interface testing:** Component interconnections and signal exchanges were validated to ensure seamless integration between adjacent components.
 
 <div align="center">
-  <figure>
-    <img src="Testing/Interface%20Testing.png" alt="Interface Testing" width="550"/>
-    <figcaption><i>Figure 12: Interface testing methodology for component interconnections</i></figcaption>
-  </figure>
+  <img src="Testing/Interface%20Testing.png" alt="Interface Testing" width="550"/>
 </div>
 
 <div align="center">
-  <figure>
-    <img src="Testing/Interface%20Testing%20models.png" alt="Interface Testing Models" width="550"/>
-    <figcaption><i>Figure 13: Interface testing models demonstrating component compatibility</i></figcaption>
-  </figure>
+  <i>Figure 12: Interface testing methodology for component interconnections</i>
+</div>
+
+<div align="center">
+  <img src="Testing/Interface%20Testing%20models.png" alt="Interface Testing Models" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 13: Interface testing models demonstrating component compatibility</i>
 </div>
 
 **System testing:** Complete system integration was validated through comprehensive test scenarios to verify functionality and performance.
 
 <div align="center">
-  <figure>
-    <img src="Testing/System%20Testing.jpg" alt="System Testing" width="550"/>
-    <figcaption><i>Figure 14: System testing</i></figcaption>
-  </figure>
+  <img src="Testing/System%20Testing.jpg" alt="System Testing" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 14: System testing</i>
 </div>
 
 <div align="center">
