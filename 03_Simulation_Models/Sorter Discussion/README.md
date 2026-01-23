@@ -1,4 +1,4 @@
-# Sorter Simulation Model
+# Sorting System Design
 
 Evaluation of three design approaches for an efficient sorting system that handles mixed product flow from multiple sources and ensures single product-type output on each conveyor line.
 
@@ -13,7 +13,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 1: Horizontal conveyor design concept</i>
+  <i>Figure 1: Design concept-Horizontal conveyor</i>
 </div>
 
 <br>
@@ -33,7 +33,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 3: Visual Components model - Approach 1</i>
+  <i>Figure 3: Approach 1-Visual Components model</i>
 </div>
 
 <br>
@@ -43,7 +43,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 4: Sorter configuration - Approach 1</i>
+  <i>Figure 4: Approach 1-Sorter configuration</i>
 </div>
 
 <br>
@@ -60,7 +60,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 5: Circular conveyor schematic concept</i>
+  <i>Figure 5: Design concept-Circular conveyor</i>
 </div>
 
 <br>
@@ -70,7 +70,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 6: Circular conveyor design with decision points</i>
+  <i>Figure 6: Decision flow logic for Circular conveyor</i>
 </div>
 
 <br>
@@ -80,7 +80,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 7: Visual Components model - Approach 2</i>
+  <i>Figure 7: Approach 2-Visual Components model</i>
 </div>
 
 <br>
@@ -90,7 +90,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 8: Sorter configuration - Approach 2</i>
+  <i>Figure 8: Approach 2-Sorter configuration</i>
 </div>
 
 <br>
