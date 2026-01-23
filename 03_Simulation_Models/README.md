@@ -46,7 +46,19 @@ Modelled a battery discharge layout and exported process flow videos for visuali
 
 <br>
 
-## 3. Sorting System Design
+## 3. Demonstrator TS1 Production layout 
+
+<div align="center">
+  <img src="TS2%20Production%20Layout/TS1%20Example%20Production%20System.gif" alt="TS2 Production System" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 3: Example production system with multiple process stations and transfer system layout</i>
+</div>
+
+<br>
+
+## 4. Sorting System Design
 
 Evaluation of three design approaches for an efficient sorting system that handles mixed product flow from multiple sources and ensures single product-type output on each conveyor line.
 
