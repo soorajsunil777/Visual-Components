@@ -8,7 +8,7 @@ Plant Simulation provides a comprehensive environment for discrete event simulat
 
 ## Simulation Model Architecture
 
-The simulation model represents a material flow system with multiple conveyor sections, workstations, and material handling components. The system architecture was designed to capture realistic production scenarios while maintaining computational tractability for optimization experiments.
+The simulation model represents a material flow system for a manufacturing plant that produces different product types subjected to a series of processes. The objectve is to reduce order delays and optimize production sequence. The system architecture was designed to capture realistic production scenarios while maintaining computational tractability for optimization experiments.
 
 <div align="center">
   <img src="Plant Simulation model 2D.png" alt="Plant Simulation 2D Model" width="550"/>
