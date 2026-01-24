@@ -1,21 +1,25 @@
-## Master Thesis - Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic components of Transfer Systems
 
-This folder contains research and implementation work from the master thesis focused on developing a dynamic data exchange framework for Visual Components simulation platform. The work addresses the challenge of efficient information flow between Visual Components and external systems, enabling seamless integration and data interoperability in manufacturing simulation environments.
+## Master thesis: Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems
 
-The research encompasses the development of a model export framework, information flow architecture, and practical demonstration through production system applications. This work contributes to enhancing Visual Components' integration capabilities with enterprise systems and data analysis tools.
+## Overview
+This repository contains the research artifacts, models, and prototypes developed within the scope of the Master thesis *“Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems”*. The work is conducted in the context of digital production system engineering and focuses on the integration of simulation and electrical engineering workflows.
 
-## Research Overview
+## Motivation
+Modern production system engineering involves multiple disciplines and tool chains, each relying on domain-specific data models. The lack of harmonized information models leads to manual data exchange, inconsistencies, and limited automation potential. In particular, the generation of electrical documentation from upstream engineering data remains largely tool-specific and error-prone. A common, tool-independent data basis is required to enable automated and reliable engineering workflows.
 
-The master thesis investigates methods for automated data extraction and exchange from Visual Components simulation models, focusing on creating a flexible and scalable framework that supports various integration scenarios without manual intervention.
+## Objective
+The thesis evaluates how simulation/ planning artifacts of Rexroth’s Transfer System 2 (TS2) can be enriched with electrical metadata to support electrical diagram generation using EPLAN eBUILD, by developing a scalable engineering data logistics pipeline between Visual Components and EPLAN based on a Common Data Model (CDM), implemented with AutomationML. This approach is aligned with results from the DIAMOND (Digitale Anlagenmodellierung mit neutralen Datenformaten) research project, which develops an adaptable CDM and modern data exchange via shared data spaces, funded by the EU and the German federal government with 25 consortium partners.
 
-**Research Objectives:**
-- Develop an automated framework for extracting simulation model data
-- Design a flexible information flow architecture for data exchange
-- Enable seamless integration between Visual Components and external systems
-- Validate the framework through real-world production system scenarios
-- Provide a foundation for enhanced digital twin implementations
+The objective is to establish a consistent and reusable engineering data foundation across disciplines, reduce manual effort in electrical documentation, enhance traceability from upstream planning artifacts to the resulting electrical design and contribute toward a standardized, automation ready digital engineering toolchain for mechatronic transport systems.
 
----
+## Scope
+The thesis includes:
+- Analysis of domain-specific information models in Simulation and Electrical engineering domains.  
+- Development of a Common data model based on DIAMOND concepts.  
+- Prototypical generation of EPLAN relevant data from upstream planning artifacts (Visual Components simulation model)  
+- *Implementation of data logistics* – Within this subtask the intended data logistics and the wiring plan generation algorithm shall be implemented. Starting point for this implementation shall be the public available results of the DIAMOND project and AutomationML based realizations at Otto-von-Guericke University. For the implementation of the wiring plan generation algorithm a python implementation integratable in the engineering data logistics shall be realized.
+- Prototypical application of developed pipeline applied to an example production system.
+- Evaluation of the approach with respect to engineering effort, data consistency, and automation potential.
 
 ## Information Flow Architecture
 
@@ -29,41 +33,6 @@ The framework implements a comprehensive information flow model that facilitates
   <i>Figure 1: Overall information flow architecture for the data exchange framework</i>
 </div>
 
-<br>
-
-**Key Components:**
-- **Data Extraction Module:** Automated extraction of model properties, component parameters, and simulation results
-- **Data Transformation Layer:** Flexible transformation and formatting of extracted data
-- **Communication Interface:** Support for multiple communication protocols and data formats
-- **Integration Adapter:** Connectors for various external systems and platforms
-- **Validation Layer:** Ensures data integrity and consistency during exchange
-
----
-
-## Visual Components Interface Model Export
-
-Implementation of a model export interface that enables automated extraction of component hierarchies, properties, connections, and simulation parameters from Visual Components layouts.
-
-<div align="center">
-  <img src="VC IF model export.png" alt="Visual Components Interface Model Export" width="550"/>
-</div>
-
-<div align="center">
-  <i>Figure 2: Visual Components interface model export structure and workflow</i>
-</div>
-
-<br>
-
-**Export Capabilities:**
-- Component hierarchy and relationships
-- Geometric and kinematic properties
-- Behavior and control logic parameters
-- Material flow paths and connections
-- Simulation statistics and performance metrics
-- Custom property definitions and values
-
----
-
 ## Production System Application
 
 Demonstration of the framework applied to a complete production system, showcasing practical implementation and validation of the data exchange methodology.
@@ -73,82 +42,19 @@ Demonstration of the framework applied to a complete production system, showcasi
 </div>
 
 <div align="center">
-  <i>Figure 3: Example production system used for framework validation and testing</i>
+  <i>Figure 2: Example production system used for framework validation and testing</i>
+</div>
+
+## Visual Components Information Model Export
+
+Implementation of a model export AddOn that enables export of component hierarchies, electrical metadata and EPLAN generation algorithms (Structure Identifiers, rule sets etc.) from Visual Components.
+
+<div align="center">
+  <img src="VC IF model export.png" alt="Visual Components Interface Model Export" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 3: Visual Components Information model export AddOn</i>
 </div>
 
 <br>
-
-**Application Scenarios:**
-- Production system configuration management
-- Real-time simulation data monitoring
-- Integration with Manufacturing Execution Systems (MES)
-- Digital twin synchronization
-- Performance analysis and reporting
-- Layout optimization and scenario comparison
-
----
-
-## Key Contributions
-
-- **Automated Data Extraction:** Eliminates manual data collection and reduces integration effort
-- **Flexible Framework:** Adaptable to various integration requirements and use cases
-- **Standardized Interface:** Provides consistent data structure for external systems
-- **Scalability:** Supports both simple and complex production system models
-- **Extensibility:** Modular architecture allows for easy addition of new features
-- **Practical Validation:** Demonstrated effectiveness through real production system examples
-
----
-
-## Technologies & Methods
-
-- **Simulation Platform:** Visual Components 4.x
-- **Programming:** Python 3.x for framework development
-- **Data Formats:** JSON, XML, CSV for data exchange
-- **Architecture:** Modular, layer-based design pattern
-- **Integration:** API-based communication interfaces
-- **Validation:** Test-driven development and case study verification
-- **Documentation:** Academic research documentation and technical reports
-
----
-
-## Research Impact
-
-This research contributes to:
-- Enhanced interoperability of Visual Components with enterprise systems
-- Reduced integration complexity for digital manufacturing implementations
-- Foundation for advanced digital twin applications
-- Improved data accessibility for analysis and decision-making
-- Streamlined workflows for simulation-based optimization
-
----
-
-## Documentation
-
-Comprehensive research documentation including:
-- Thesis manuscript with methodology and findings
-- Framework architecture and design documentation
-- Implementation guides and technical specifications
-- Case study analysis and validation results
-- Future work recommendations and enhancement opportunities
-
----
-
-*This master thesis work represents a significant contribution to manufacturing simulation integration methodologies, providing a practical framework for enhanced data interoperability in Visual Components environments.*
-
-# Master thesis: Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems
-
-## Overview
-This repository contains the research artifacts, models, and prototypes developed within the scope of the Master’s thesis *“Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems”*. The work is conducted in the context of digital production system engineering and focuses on the integration of simulation and electrical engineering workflows.
-
-## Motivation
-Modern production system engineering involves multiple disciplines and tool chains, each relying on domain-specific data models. The lack of harmonized information models leads to manual data exchange, inconsistencies, and limited automation potential. In particular, the generation of electrical documentation from upstream engineering data remains largely tool-specific and error-prone. A common, tool-independent data basis is required to enable automated and reliable engineering workflows.
-
-## Objective
-The objective of this thesis is to evaluate the automated generation of EPLAN electrical artifacts within a digital engineering tool chain. The work applies the DIAMOND Common Data Modelling approach to harmonize data from simulation, system structuring, and electrical engineering domains. By developing and prototypically applying a common information model, the thesis assesses the feasibility, benefits, and limitations of model-based data integration for improving consistency, traceability, and automation in multidisciplinary engineering processes.
-
-## Scope
-The thesis includes:
-- Analysis of domain-specific information models in simulation and electrical engineering  
-- Development of a common data model based on DIAMOND concepts  
-- Prototypical generation of EPLAN-relevant data from upstream engineering models  
-- Evaluation of the approach with respect to engineering effort, data consistency, and automation potential
