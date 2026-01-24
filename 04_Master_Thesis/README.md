@@ -63,7 +63,7 @@ Extended TS2 simulation objects by adding electrical attributes metadata for EPL
 </div>
 
 <div align="center">
-  <i>Figure 4: TS2 components extended with electrical metadata</i>
+  <i>Figure 3: TS2 components extended with electrical metadata</i>
 </div>
 
 <div align="center">
@@ -71,7 +71,7 @@ Extended TS2 simulation objects by adding electrical attributes metadata for EPL
 </div>
 
 <div align="center">
-  <i>Figure 5: Device Tag generation and export string configuration</i>
+  <i>Figure 4: Device Tag generation and export string configuration</i>
 </div>
 
 
@@ -84,7 +84,7 @@ Implementation of a model export AddOn that enables export of component hierarch
 </div>
 
 <div align="center">
-  <i>Figure 3: Visual Components Information model export AddOn</i>
+  <i>Figure 5: Visual Components Information model export AddOn</i>
 </div>
 
 <br>

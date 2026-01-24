@@ -7,5 +7,5 @@ Modelled and implemented capacity-based control logic to the TS1 and TS2 Stop Ga
 </div>
 
 <div align="center">
-  <i>Figure: TS2 Stop Gate component modelling and capacity-based control logic</i>
+  <i>Figure 1: TS2 Stop Gate component modelling and capacity-based control logic</i>
 </div>

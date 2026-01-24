@@ -53,7 +53,7 @@ Modelled a battery discharge layout and exported process flow videos for visuali
 </div>
 
 <div align="center">
-  <i>Figure 3: Example production system with multiple process stations and transfer system layout</i>
+  <i>Figure 4: Example production system with multiple process stations and transfer system layout</i>
 </div>
 
 <br>
@@ -73,7 +73,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 1: Design concept-Horizontal conveyor</i>
+  <i>Figure 5: Design concept-Horizontal conveyor</i>
 </div>
 
 <br>
@@ -83,7 +83,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 2: Decision flow logic for horizontal conveyors</i>
+  <i>Figure 6: Decision flow logic for horizontal conveyors</i>
 </div>
 
 <br>
@@ -93,7 +93,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 3: Approach 1-Visual Components model</i>
+  <i>Figure 7: Approach 1-Visual Components model</i>
 </div>
 
 <br>
@@ -103,7 +103,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 4: Approach 1-Sorter configuration</i>
+  <i>Figure 8: Approach 1-Sorter configuration</i>
 </div>
 
 <br>
@@ -120,7 +120,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 5: Design concept-Circular conveyor</i>
+  <i>Figure 9: Design concept-Circular conveyor</i>
 </div>
 
 <br>
@@ -130,7 +130,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 6: Decision flow logic for Circular conveyor</i>
+  <i>Figure 10: Decision flow logic for Circular conveyor</i>
 </div>
 
 <br>
@@ -140,7 +140,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 7: Approach 2-Visual Components model</i>
+  <i>Figure 11: Approach 2-Visual Components model</i>
 </div>
 
 <br>
@@ -150,7 +150,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 8: Approach 2-Sorter configuration</i>
+  <i>Figure 12: Approach 2-Sorter configuration</i>
 </div>
 
 <br>
@@ -166,7 +166,7 @@ Evaluation of three design approaches for an efficient sorting system that handl
 </div>
 
 <div align="center">
-  <i>Figure 9: Dead-end buffer configuration</i>
+  <i>Figure 13: Dead-end buffer configuration</i>
 </div>
 
 <br>

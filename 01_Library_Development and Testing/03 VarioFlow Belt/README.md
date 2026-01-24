@@ -33,7 +33,7 @@ The component modeling process involved systematic design and implementation of 
 </div>
 
 <div align="center">
-  <i>Figure 3-6: VarioFlow Belt Components</i>
+  <i>Figure 2-5: VarioFlow Belt Components</i>
 </div>
 
 <br>
@@ -90,5 +90,5 @@ Comprehensive testing was conducted to validate component functionality, interfa
 </div>
 
 <div align="center">
-  <i>Figure 7-9: VarioFlow Belt testing models for validation and integration verification</i>
+  <i>Figure 6-8: VarioFlow Belt testing models for validation and integration verification</i>
 </div>

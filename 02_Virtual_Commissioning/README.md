@@ -69,7 +69,7 @@ Proof-of-concept Virtual Commissioning demonstration models showcasing virtual c
 </div>
 
 <div align="center">
-  <i>Figure 3: ctrlX WORKS Dashboard</i>
+  <i>Figure 2: ctrlX WORKS Dashboard</i>
 </div>
 
 <br>
