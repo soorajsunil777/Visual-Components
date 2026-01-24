@@ -5,6 +5,7 @@ This folder documents the application of discrete event simulation and genetic a
 ## Overview
 
 Plant Simulation provides a comprehensive environment for discrete event simulation and optimization of production and logistics systems. This project applies evolutionary optimization methods to enhance material flow efficiency in conveyor-based transport systems, demonstrating the integration of simulation technology with metaheuristic optimization algorithms.
+
 ## Simulation Model Architecture
 
 The simulation model represents a material flow system with multiple conveyor sections, workstations, and material handling components. The system architecture was designed to capture realistic production scenarios while maintaining computational tractability for optimization experiments.
@@ -14,7 +15,7 @@ The simulation model represents a material flow system with multiple conveyor se
 </div>
 
 <div align="center">
-  <i>Figure 1: Plant Simulation model - 2D view showing system layout and material flow paths</i>
+  <i>Figure 1: Plant Simulation model - 2D</i>
 </div>
 
 <br>
@@ -24,24 +25,14 @@ The simulation model represents a material flow system with multiple conveyor se
 </div>
 
 <div align="center">
-  <i>Figure 2: Plant Simulation model - 3D visualization demonstrating system topology</i>
+  <i>Figure 2: Plant Simulation model - 3D</i>
 </div>
 
 <br>
 
 ## Genetic Algorithm Optimization
 
-A genetic algorithm (GA) was implemented to optimize system performance parameters, including buffer capacities, processing speeds, and routing strategies. The optimization framework employs evolutionary operators—selection, crossover, and mutation—to iteratively improve solution quality across successive generations.
-
-### Optimization Methodology
-
-The genetic algorithm approach involves:
-- **Chromosome Encoding:** System parameters represented as numerical gene sequences
-- **Fitness Evaluation:** Objective function assessment based on throughput, utilization, and cycle time metrics
-- **Selection Mechanism:** Tournament or roulette-wheel selection for parent individuals
-- **Genetic Operators:** Crossover and mutation to generate offspring solutions
-- **Elitism Strategy:** Preservation of best-performing individuals across generations
-- **Convergence Criteria:** Termination based on generation limit or fitness plateau
+Genetic algorithm (GA) was implemented to optimize system performance parameters, including Production Sequence, Makespan and Tardiness reduction b minimising the fiteness fucntion (Z).
 
 ### Optimization Results
 
@@ -77,33 +68,11 @@ The genetic algorithm demonstrated effective convergence toward optimal system c
 
 <br>
 
-## Key Findings
+## Optimization results
 
-The optimization study yielded several significant insights:
-- Genetic algorithms effectively navigate the complex solution space of material flow systems
-- Proper parameter tuning (population size, mutation rate, crossover probability) critically influences convergence speed and solution quality
-- Multi-objective optimization approaches can balance competing performance criteria
-- Simulation-based optimization enables evaluation of scenarios infeasible or costly in physical systems
-- Integration of Plant Simulation with optimization algorithms facilitates automated design space exploration
-
-## Technologies and Methodologies
-
-- **Simulation Platform:** Siemens Plant Simulation
-- **Optimization Method:** Genetic Algorithm (GA) with evolutionary operators
-- **Performance Metrics:** Throughput, cycle time, resource utilization, buffer levels
-- **Analysis Techniques:** Statistical analysis, sensitivity analysis, convergence studies
-- **Model Validation:** Comparison with analytical models and empirical data where applicable
-
-## Applications
-
-The methodologies developed in this work are applicable to:
-- Production system layout optimization
-- Conveyor system design and configuration
-- Buffer sizing and placement strategies
-- Resource allocation in manufacturing environments
-- Supply chain and warehouse logistics optimization
-- System redesign and continuous improvement initiatives
-
+- Best Fitness Value: 23:33:37.0149 The parameters of the best solution are set in the model.
+- Best parameter of the allocation problems: Prod A Lot Size: 21, Prod B Lot Size: 21, Prod C Lot Size: 21, Prod D Lot Size: 21, Prod E Lot Size: 61
+- Best solutions of the sequence problems: **Product B > Product D, Product C, Product A, Product E**
 ---
 
-*This work demonstrates the integration of discrete event simulation with metaheuristic optimization for systematic enhancement of material flow system performance.*
+*This work demonstrates the integration of discrete event simulation with  optimization for systematic enhancement of material flow system performance.*
