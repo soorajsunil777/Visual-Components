@@ -22,7 +22,7 @@ Simulation studies and layout concepts including ActiveShuttle, battery discharg
 Thesis visuals and documentation covering information flow, custom components, and system setup.
 
 ## 🛠️ Technical Stack
-- **Simulation:** Visual Components 4.x
+- **Simulation:** Visual Components 4.10
 - **Programming:** Python 3.x, PLC ST programming
 - **Automation:** ctrlX AUTOMATION, ctrlX PLC Engineering
 - **Communication Protocol:** OPC UA
