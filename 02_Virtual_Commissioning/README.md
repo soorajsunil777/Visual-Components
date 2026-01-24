@@ -46,7 +46,7 @@ The work establishes a standardized framework through systematic data evaluation
 │ WP4: Simulation Objects Visual Components Evaluation                    │
 │ • Comparison of I/O signals and simulation variables, comparison of     │
 │   sequence of actions with simulation mechanism                         │
-│ • Modification of components:adding additional attributes and behaviours│ 
+│ • Modification of components:Adding additional attributes and behaviours│ 
 │   to mimic the real life counterpart of the system.                     │          
 └──────────────────────────────────┬──────────────────────────────────────┘
                                    │
