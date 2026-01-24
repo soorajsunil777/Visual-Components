@@ -81,3 +81,7 @@ Implementation of a model export AddOn that enables export of component hierarch
 </div>
 
 <br>
+
+---
+
+*Thesis Work in progress.*
