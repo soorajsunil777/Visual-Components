@@ -5,7 +5,6 @@ This folder documents the application of discrete event simulation and genetic a
 ## Overview
 
 Plant Simulation provides a comprehensive environment for discrete event simulation and optimization of production and logistics systems. This project applies evolutionary optimization methods to enhance material flow efficiency in conveyor-based transport systems, demonstrating the integration of simulation technology with metaheuristic optimization algorithms.
-
 ## Simulation Model Architecture
 
 The simulation model represents a material flow system with multiple conveyor sections, workstations, and material handling components. The system architecture was designed to capture realistic production scenarios while maintaining computational tractability for optimization experiments.
@@ -61,16 +60,15 @@ The genetic algorithm demonstrated effective convergence toward optimal system c
 ### Experimental Results Summary
 
 ```
-+-------------+------------+------------------+------------------+------------------+
-| Scenario    | Generation | Fitness Value    | Throughput (u/h) | Cycle Time (min) |
-+-------------+------------+------------------+------------------+------------------+
-| Baseline    |          0 |            0.450 |              156 |             18.5 |
-| GA - Gen 10 |         10 |            0.672 |              189 |             15.2 |
-| GA - Gen 20 |         20 |            0.785 |              214 |             13.8 |
-| GA - Gen 30 |         30 |            0.843 |              228 |             12.9 |
-| GA - Gen 40 |         40 |            0.891 |              237 |             12.4 |
-| Optimized   |         50 |            0.924 |              245 |             11.8 |
-+-------------+------------+------------------+------------------+------------------+
++------------------+--------------------+------------------+
+| No. of Generation| Size of Generation |   Minimized Z    |
++------------------+--------------------+------------------+
+|        5         |         5          |  1:07:27:40.1726 |
+|        5         |         10         |  2:11:34:17.5726 |
+|        10        |         10         |  1:02:03:36.5452 |
+|        15        |         15         |  1:02:27:52.9227 |
+|        20        |         20         |  22:30:13.5641   |
++------------------+--------------------+------------------+
 ```
 
 <div align="center">
