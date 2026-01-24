@@ -58,12 +58,21 @@ The work establishes a standardized framework through systematic data evaluation
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-## PoC Demostrator Models
+## Virtual Commissioning Demostrator Models
 
 Proof-of-concept Virtual Commissioning demonstration models showcasing virtual commissioning capabilities and system behavior validation.
 
 **Demonstrator Visualizations:**
 
+<div align="center">
+  <img src="PoC demo models/ctrlX Dashboard.png" alt="ctrlX WORKS Dashboard" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 3: ctrlX WORKS Dashboard</i>
+</div>
+
+<br>
 <div align="center">
   <img src="PoC demo models/VCOM TFE1.gif" alt="TFE1 Virtual Commissioning Demo" width="550"/>
 </div>

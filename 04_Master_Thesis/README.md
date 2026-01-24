@@ -21,6 +21,13 @@ The thesis includes:
 - Prototypical application of developed pipeline applied to an example production system.
 - Evaluation of the approach with respect to engineering effort, data consistency, and automation potential.
 
+### Technologies Used:
+
+- **Simulation Platform:** Visual Components 4.10
+- **ECAD:** EPLAN Electric P8 2026, eBUILD Library Designer, eBUILD Project Generation
+- **Data exchange format:** Automation ML, JSON, XML.
+- **Engineering Data logistics pipeline:** Streamlit based python implementation 
+
 ## Information Flow Architecture
 
 The framework implements a comprehensive information flow model that facilitates bidirectional data exchange between Visual Components and external applications, databases, or analysis tools.
