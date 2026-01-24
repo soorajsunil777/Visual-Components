@@ -45,6 +45,10 @@ Demonstration of the framework applied to a complete production system, showcasi
   <i>Figure 2: Example production system used for framework validation and testing</i>
 </div>
 
+## Enriching Transfer System simulation objects with electrical metadata
+
+
+
 ## Visual Components Information Model Export
 
 Implementation of a model export AddOn that enables export of component hierarchies, electrical metadata and EPLAN generation algorithms (Structure Identifiers, rule sets etc.) from Visual Components.
