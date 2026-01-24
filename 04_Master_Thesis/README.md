@@ -2,15 +2,15 @@
 ## Master thesis: Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems
 
 ## Overview
-This repository contains the research artifacts, models, and prototypes developed within the scope of the Master thesis *“Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems”*. The work is conducted in the context of digital production system engineering and focuses on the integration of simulation and electrical engineering workflows.
+This repository contains artifacts, models, and prototypes from the Master thesis *“Evaluation of EPLAN Generation in a Digital Engineering Tool Chain for Mechatronic Transport Systems”*, focusing on integrating simulation and electrical engineering workflows.
 
 ## Motivation
-Modern production system engineering involves multiple disciplines and tool chains, each relying on domain-specific data models. The lack of harmonized information models leads to manual data exchange, inconsistencies, and limited automation potential. In particular, the generation of electrical documentation from upstream engineering data remains largely tool-specific and error-prone. A common, tool-independent data basis is required to enable automated and reliable engineering workflows.
+Production system engineering spans multiple disciplines and tool chains with fragmented data models, causing manual exchange, inconsistencies, and limited automation. A common, tool-independent data basis is needed to reliably automate electrical documentation from upstream engineering data.
 
 ## Objective
-The thesis evaluates how simulation/ planning artifacts of Rexroth’s Transfer System 2 (TS2) can be enriched with electrical metadata to support electrical diagram generation using EPLAN eBUILD, by developing a scalable engineering data logistics pipeline between Visual Components and EPLAN based on a Common Data Model (CDM), implemented with AutomationML. This approach is aligned with results from the DIAMOND (Digitale Anlagenmodellierung mit neutralen Datenformaten) research project, which develops an adaptable CDM and modern data exchange via shared data spaces, funded by the EU and the German federal government with 25 consortium partners.
+Evaluate enriching Rexroth’s Transfer System 2 (TS2) simulation artifacts with electrical metadata to generate electrical diagrams in EPLAN eBUILD via a scalable data logistics pipeline between Visual Components and EPLAN, based on a Common Data Model (CDM) implemented with AutomationML and aligned with the DIAMOND research project.
 
-The objective is to establish a consistent and reusable engineering data foundation across disciplines, reduce manual effort in electrical documentation, enhance traceability from upstream planning artifacts to the resulting electrical design and contribute toward a standardized, automation ready digital engineering toolchain for mechatronic transport systems.
+The goal is a consistent, reusable engineering data foundation that reduces manual documentation effort, improves traceability, and supports a standardized, automation-ready toolchain for mechatronic transport systems.
 
 ## Scope
 The thesis includes:
@@ -46,7 +46,26 @@ Demonstration of the framework applied to a complete production system, showcasi
 </div>
 
 ## Enriching Transfer System simulation objects with electrical metadata
+Extended TS2 simulation objects by adding electrical attributes metadata for EPLAN generation and in accordance with Transfer System 2 product documentation.
 
+- Implemented internal Python logic to generate a unique identifier Device Tag (DT) for each instantiated simulation object.
+- Introduced an export string property, consisting of a comma-separated attribute list of each component, that specifies which component attributes and behaviors shall be included by the exporter add-on during data export.
+
+<div align="center">
+  <img src="TS2 Custom components.png" alt="TS2 custom components with electrical metadata" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 4: TS2 components extended with electrical metadata</i>
+</div>
+
+<div align="center">
+  <img src="DeviceTag generation.png" alt="Device Tag generation and export string" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 5: Device Tag generation and export string configuration</i>
+</div>
 
 
 ## Visual Components Information Model Export
