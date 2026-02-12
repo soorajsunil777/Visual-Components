@@ -1,7 +1,7 @@
 # Visual Components Portfolio
 
 **Core Competencies:**
-- Bosch Rexroth Transfer System Library Development
+- Simulation Library Development
 - Custom Component Library Design & Testing
 - ctrlX based Virtual Commissioning with configurable Function Blocks
 - Python AddOn Development for Visual Components
