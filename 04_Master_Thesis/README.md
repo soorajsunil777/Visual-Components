@@ -87,6 +87,13 @@ Implementation of a model export AddOn that enables export of component hierarch
   <i>Figure 5: Visual Components Information model export AddOn</i>
 </div>
 
+## Visual Components AddOns developed:
+
+1. **JSON Exporter**: Exports Visual Components information model with selected attributes of components in a structured JSON format from the simulation model.
+2. **JSON Importer**: Imports Visual Components tool specific information model with mapped EPLAN roundtrip data and writes to the corresponding attributes of each simulation object.
+3. **CSV Exporter**: Exports Visual Components information model in a CSV format with electrical metadata placeholders of simulation objects.
+4. **UID Generator**: Generates Unique Device Identifiers for each parent and child simulation object with a predefined prefix.
+
 <br>
 
 ---
