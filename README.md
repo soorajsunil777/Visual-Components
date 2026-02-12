@@ -23,12 +23,11 @@ Thesis visuals and documentation covering information flow, custom components, a
 
 ## 🛠️ Technical Stack
 - **Simulation:** Visual Components 4.10
-- **Programming:** Python 3.x, PLC ST programming
+- **Programming:** Python, PLC ST programming
 - **Automation:** ctrlX AUTOMATION, ctrlX PLC Engineering
 - **Communication Protocol:** OPC UA
 - **Planning:** MTPro
 - **ECAD:** EPLAN Electric P8, eBUILD
-- **Tools:** Git, Testing Frameworks
 
 ## 📝 Note
 *This portfolio showcases methodologies, approaches, and non-proprietary examples.
