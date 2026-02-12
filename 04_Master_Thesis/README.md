@@ -96,6 +96,36 @@ Implementation of a model export AddOn that enables export of component hierarch
 
 <br>
 
+## Development of Engineering Data Logistics:
+
+<div align="center">
+  <img src="EDL Architecture.png" alt="DIAMOND EDL Architecture" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 6: DIAMOND Engineering Data Logistics Architecture</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="DIAMOND Engineering Data Logistics Streamlit web app.png" alt="DIAMOND EDL App" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 7: DIAMOND Engineering Data Logistics Streamlit App</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="Eg.Generated eBUILD Config.png" alt="eBUILD configuration" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 7: Eg. Generated eBUILD XML configuration for TS2-Conveyor Unit from DIAMOND Backbone</i>
+</div>
+
 ---
 
 *Thesis Work in progress.*
