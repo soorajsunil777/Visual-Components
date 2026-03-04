@@ -4,6 +4,7 @@ This folder contains virtual commissioning work for Rexroth Transfer System TS2,
 
 The work establishes a standardized framework through systematic data evaluation, development environment definition, and proof-of-concept implementation with operational PLC function blocks for selected material flow scenarios, which was then generalized and expanded across the entire TS2 library.
 
+
 ### Technologies Used:
 
 - **Simulation Platform:** Visual Components 4.10
@@ -113,3 +114,9 @@ Proof-of-concept Virtual Commissioning demonstration models showcasing virtual c
 ---
 
 *This work demonstrates practical implementation of virtual commissioning workflows for industrial automation systems, enabling efficient validation and optimization of control systems prior to physical deployment.*
+
+## Publications
+
+This work is featured in the following Bosch Rexroth whitepaper:
+
+- [Whitepaper: Materialfluss – Bosch Rexroth](https://www.boschrexroth.com/de/at/industrielle-automatisierung/download-whitepaper-materialfluss/)
