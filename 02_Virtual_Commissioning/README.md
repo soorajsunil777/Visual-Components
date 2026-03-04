@@ -113,10 +113,12 @@ Proof-of-concept Virtual Commissioning demonstration models showcasing virtual c
 - **Early Validation:** Pre-commissioning verification of control logic and system behavior
 ---
 
-*This work demonstrates practical implementation of virtual commissioning workflows for industrial automation systems, enabling efficient validation and optimization of control systems prior to physical deployment.*
-
 ## Publications
 
 This work is featured in the following Bosch Rexroth whitepaper:
 
 - [Whitepaper: Materialfluss – Bosch Rexroth](https://www.boschrexroth.com/de/at/industrielle-automatisierung/download-whitepaper-materialfluss/)
+
+---
+
+*This work demonstrates practical implementation of virtual commissioning workflows for industrial automation systems, enabling efficient validation and optimization of control systems prior to physical deployment.*
