@@ -9,7 +9,15 @@ collision avoidance, two families of statistics, and a drive-sizing import add-o
 > Built during an internship in Customer Business Factory Automation, Bosch Rexroth AG
 > (Lohr am Main). Scope: simulation model → virtual-commissioning demonstrator → library release.
 
-![FTS layout example](01_System_Overview/fts_layout_example.png)
+<div align="center">
+  <img src="01_System_Overview/Example_FTS_layout_with_Carrier_Ferry_Segment.png" alt="FTS layout example" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 1: Example FTS layout with Carrier, Ferry and Section components</i>
+</div>
+
+<br>
 
 ---
 
@@ -33,10 +41,16 @@ library reduces a real layout to three reusable simulation components — a stra
 a **Carrier (WPC)**, and a **Horizontal Ferry** for lateral transfer between parallel sections.
 Curves, vertical elevators, and rotational platforms are deferred to a later version.
 
-![FTS VC library development overview](01_System_Overview/fts_overview.png)
-
 <!-- full system running: carriers traversing sections + ferry transfer -->
-![FTS full run](01_System_Overview/fts_full_run.gif)
+<div align="center">
+  <img src="01_System_Overview/System_Overview_demo.gif" alt="FTS full run" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 2: Full system running — carriers traversing sections with ferry transfer</i>
+</div>
+
+<br>
 
 ---
 
@@ -48,21 +62,72 @@ needs (track length, motor pitch, carrier size, ferry port count).
 ### Section
 Parametric straight track; length and linear-motor pitch drive the geometry and the motion model.
 
-![Section component graph](02_Component_and_Variant_Modelling/Section/section_component_graph.png)
-![Section variants](02_Component_and_Variant_Modelling/Section/section_variants.gif)
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/Section/FTSSingle_Section_Component_graph.png" alt="Section component graph" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 3: Section component graph</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/Section/Single%20Section.png" alt="Single section" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 4: Parametric single Section component</i>
+</div>
+
+<br>
 
 ### Carrier (WPC)
 The independently controllable mover. Carries the motion model and per-carrier state.
 
-![Carrier component graph](02_Component_and_Variant_Modelling/Carrier_WPC/carrier_component_graph.png)
-![Carrier variants](02_Component_and_Variant_Modelling/Carrier_WPC/carrier_variants.gif)
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/Carrier_WPC/FTSCarrier_Component_graph.png" alt="Carrier component graph" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 5: Carrier (WPC) component graph</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/Carrier_WPC/Carrier.png" alt="Carrier" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 6: Carrier (WPC) component</i>
+</div>
+
+<br>
 
 ### Horizontal Ferry
 Lateral transfer between parallel sections; routing rules across its ports, geometry scaled to
 section width.
 
-![Ferry component graph](02_Component_and_Variant_Modelling/Horizontal_Ferry/ferry_component_graph.png)
-![Ferry transfer](02_Component_and_Variant_Modelling/Horizontal_Ferry/ferry_transfer.gif)
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/Horizontal_Ferry/FTSHorizontal_Ferry_Component_graph.png" alt="Ferry component graph" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 7: Horizontal Ferry component graph</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/Horizontal_Ferry/Ferry.png" alt="Ferry" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 8: Horizontal Ferry component</i>
+</div>
+
+<br>
 
 ---
 
@@ -85,15 +150,57 @@ path, so inter-carrier blocking is not captured — documented as a known limita
 Carrier = component with its own translational joint; `vcServoController` runs the trapezoidal
 profile, giving true independent speed / acceleration / direction per carrier.
 
-![Servo controller carrier movement architecture](03_Behaviour_Modelling/01_Link_Based/servo_controller_architecture.png)
-![Link-based demo](03_Behaviour_Modelling/01_Link_Based/link_based_demo.gif)
+<div align="center">
+  <img src="03_Behaviour_Modelling/01_Link_Based/ServoControllerMode.png" alt="Servo controller carrier movement architecture" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 9: Servo controller carrier-movement architecture</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="03_Behaviour_Modelling/01_Link_Based/ServoController_demo_R1.gif" alt="Servo controller demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 10: Servo controller — carrier movement demo</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="03_Behaviour_Modelling/01_Link_Based/Setpoint_Genrator_demo_R1.gif" alt="Setpoint generator demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 11: Setpoint generator demo</i>
+</div>
+
+<br>
 
 ### 3.2 Dynamic Path-Based
-![Dynamic path-based demo](03_Behaviour_Modelling/02_Dynamic_Path_Based/dynamic_path_demo.gif)
+<div align="center">
+  <img src="03_Behaviour_Modelling/02_Dynamic_Path_Based/Dynamic_Path_based.png" alt="Dynamic path-based" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 12: Dynamic path-based carrier movement</i>
+</div>
+
+<br>
 
 ### 3.3 VC Path-Based
-![Multiple-path carrier movement](03_Behaviour_Modelling/03_VC_Path_Based/multiple_path_movement.png)
-![VC path-based demo](03_Behaviour_Modelling/03_VC_Path_Based/vc_path_demo.gif)
+<div align="center">
+  <img src="03_Behaviour_Modelling/02_Dynamic_Path_Based/VC_path_based.gif" alt="VC path-based demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 13: VC path-based carrier movement demo</i>
+</div>
+
+<br>
 
 ---
 
@@ -103,10 +210,45 @@ A centralised supervisor computes a permitted position window `[pmin, pmax]` per
 publishes movement permits; each carrier clamps its move target to its window and re-issues as
 windows advance. This keeps carriers from converging on the same track segment.
 
-![Collision avoidance architecture](04_Collision_Avoidance/collision_avoidance_architecture.png)
-![Supervisor logic](04_Collision_Avoidance/supervisor_logic.png)
-![Carrier step loop](04_Collision_Avoidance/carrier_step_loop.png)
-![Collision avoidance demo](04_Collision_Avoidance/collision_avoidance_demo.gif)
+<div align="center">
+  <img src="04_Collision_Avoidance/CA_Architecture.png" alt="Collision avoidance architecture" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 14: Collision avoidance architecture</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="04_Collision_Avoidance/CA_Supervisor_logic.png" alt="Supervisor logic" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 15: Centralised supervisor logic</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="04_Collision_Avoidance/TailToHeadCollisions.gif" alt="Tail-to-head collision avoidance demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 16: Collision avoidance — tail-to-head scenario</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="04_Collision_Avoidance/HeadOnCollisions.gif" alt="Head-on collision avoidance demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 17: Collision avoidance — head-on scenario</i>
+</div>
+
+<br>
 
 ---
 
@@ -120,9 +262,35 @@ Two families of statistics run on top of the simulation:
   time, parts utilisation) via explicit `flowEnter()` / `flowLeave()` calls, required here
   because carriers are not held in VC containers.
 
-![Statistics analysis overview](05_Statistics_Analysis/statistics_overview.png)
-![Tier 1 — carrier state statistics](05_Statistics_Analysis/tier1_carrier_states.png)
-![Tier 2 — section flow statistics](05_Statistics_Analysis/tier2_section_flow.png)
+<div align="center">
+  <img src="05_Statistics_Analysis/StatisticsAnalysis.png" alt="Statistics analysis overview" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 18: Statistics analysis overview</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="05_Statistics_Analysis/Statistics_demo.gif" alt="Statistics demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 19: Statistics collection demo</i>
+</div>
+
+<br>
+
+<div align="center">
+  <img src="05_Statistics_Analysis/Statistics_demo1.gif" alt="Statistics demo" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 20: Statistics collection demo (continued)</i>
+</div>
+
+<br>
 
 ---
 
@@ -133,9 +301,15 @@ A Visual Components add-on that imports a **`.dpf` project file** exported from 
 components (motor company, motor type, drive, etc.). The add-on closes the loop between drive
 dimensioning and the simulation model.
 
-![DPF import flow](06_Drive_Sizing_DPF_Import_AddOn/dpf_import_flow.png)
-![Add-on command panel](06_Drive_Sizing_DPF_Import_AddOn/addon_command_panel.png)
-![Before/after parameterisation](06_Drive_Sizing_DPF_Import_AddOn/before_after_parameterization.gif)
+<div align="center">
+  <img src="06_AddOns/Drive_Sizing_DPF_Import_AddOn/DPF_import_flow.png" alt="DPF import flow" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 21: Drive-Sizing DPF import flow</i>
+</div>
+
+<br>
 
 Implementation notes: VC add-on environment (Python 2.7 / IronPython); native file browse via a
 `URI` property in a command panel; components filtered by an `FTS_Component` property gate before
