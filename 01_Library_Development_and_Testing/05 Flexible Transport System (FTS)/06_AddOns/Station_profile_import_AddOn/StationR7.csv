@@ -1,0 +1,6 @@
+Mover,Velocity_mms,Station,Wait_s
+mover0,1000,S2,1
+mover0,500,S1,1
+mover1,2000,S4,3
+mover1,500,S3,1
+mover1,1000,S2,1
