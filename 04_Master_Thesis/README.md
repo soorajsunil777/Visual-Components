@@ -126,6 +126,5 @@ Implementation of a model export AddOn that enables export of component hierarch
   <i>Figure 7: Eg. Generated eBUILD XML configuration for TS2-Conveyor Unit from DIAMOND Backbone</i>
 </div>
 
----
 
-*Thesis Work in progress.*
+
