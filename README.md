@@ -21,8 +21,11 @@ Simulation studies and layout concepts including ActiveShuttle, battery discharg
 ### 4. [Master Thesis](./04_Master_Thesis)
 Thesis visuals and documentation covering information flow, custom components, and system setup.
 
+### 5. [Flexible Transport System (FTS)](./05_Flexible_Transport_System%20(FTS))
+Bosch Rexroth linear-motor FTS: parametric Section / Carrier / Ferry components, three carrier-movement behaviour approaches, centralised collision avoidance, carrier-state and section-flow statistics, and a Drive-Sizing DPF import add-on.
+
 ## 🛠️ Technical Stack
-- **Simulation:** Visual Components 4.10
+- **Simulation:** Visual Components 4.10 & 5.0
 - **Programming:** Python, PLC ST programming
 - **Automation:** ctrlX AUTOMATION, ctrlX PLC Engineering
 - **Communication Protocol:** OPC UA
