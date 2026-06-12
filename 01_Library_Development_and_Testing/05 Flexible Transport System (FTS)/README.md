@@ -1,11 +1,10 @@
 # Flexible Transport System (FTS) - Visual Components Simulation Library
 
-A parametric **Visual Components 5.0 Premium** component library for the Bosch Rexroth
-**Flexible Transport System (FTS)** - a linear-motor transport system whose workpiece
+A  **Visual Components 5.0 Premium** component library for the Bosch Rexroth
+**Flexible Transport System (FTS)** - a linear motor transport system whose workpiece
 carriers (WPCs) are independently controllable along the track. This section documents the
-component and variant modelling, three carrier-movement behaviour approaches, centralised
-collision avoidance, two families of statistics, and a drive-sizing import add-on.
-
+component and variant modelling, carrier-movement behaviour approaches, centralised
+collision avoidance, statistical analysis, and developed AddOns.
 <!-- animated system movement overview -->
 <div align="center">
   <img src="01_System_Overview/FTS1.gif" alt="FTS animated overview 1" width="550"/>
@@ -55,29 +54,33 @@ collision avoidance, two families of statistics, and a drive-sizing import add-o
   - [Contents](#contents)
   - [1. System Overview](#1-system-overview)
   - [2. Component \& Variant Modelling](#2-component--variant-modelling)
-    - [Section](#section)
+    - [Single Section Segment](#single-section-segment)
     - [Carrier (WPC)](#carrier-wpc)
     - [Horizontal Ferry](#horizontal-ferry)
-  - [3. Behaviour Modelling - three approaches](#3-behaviour-modelling---three-approaches)
+    - [NYCe Controller](#nyce-controller)
+  - [3. Behaviour Modelling](#3-behaviour-modelling)
     - [3.1 Dynamic Path-Based](#31-dynamic-path-based)
     - [3.2 VC Path-Based](#32-vc-path-based)
-    - [3.3 Link-Based (adopted)](#33-link-based-adopted)
+    - [3.3 Link-Based](#33-link-based)
       - [Setpoint-Based Generator](#setpoint-based-generator)
       - [Servo Controller Mode](#servo-controller-mode)
   - [4. Collision Avoidance](#4-collision-avoidance)
   - [5. Statistics Analysis](#5-statistics-analysis)
-  - [6. Drive-Sizing Tool Project DPF Import Add-On](#6-drive-sizing-tool-project-dpf-import-add-on)
-  - [7. Tools \& Stack](#7-tools--stack)
-  - [8. Virtual Commissioning (in progress)](#8-virtual-commissioning-in-progress)
+  - [6 Add-Ons](#6-add-ons)
+    - [6.1 Drive-Sizing Tool Project DPF Import Add-On](#61-drive-sizing-tool-project-dpf-import-add-on)
+    - [6.2 Setpoint Generator Tool](#62-setpoint-generator-tool)
+    - [6.3 Station Profile Import](#63-station-profile-import)
+  - [7. Virtual Commissioning (in progress)](#7-virtual-commissioning-in-progress)
 
 ---
 
 ## 1. System Overview
 
 The FTS moves products on independently controllable carriers driven by linear motors. The
-library reduces a real layout to three reusable simulation components - a straight **Section**,
-a **Carrier (WPC)**, and a **Horizontal Ferry** for lateral transfer between parallel sections.
-Curves, vertical elevators, and rotational platforms are deferred to a later version.
+library reduces a real layout to three reusable track components - a straight **Section**,
+a **Carrier (WPC)**, and a **Horizontal Ferry** for lateral transfer between parallel sections 
+coordinated by a central **NYCe Controller** that hosts the collision-avoidance supervisor and the
+station/setpoint runner. Curves, vertical elevators, and rotational platforms are deferred to later version.
 
 <!-- full system running: carriers traversing sections + ferry transfer -->
 <div align="center">
@@ -97,8 +100,8 @@ Curves, vertical elevators, and rotational platforms are deferred to a later ver
 Each component is parametric, so a single component reconfigures into the variants a real layout
 needs (track length, motor pitch, carrier size, ferry port count).
 
-### Section
-Parametric straight track; length and linear-motor pitch drive the geometry and the motion model.
+### Single Section Segment
+
 
 <div align="center">
   <img src="02_Component_and_Variant_Modelling/Section/FTSSingle_Section_Component_graph.png" alt="Section component graph" width="550"/>
@@ -144,8 +147,7 @@ The independently controllable mover. Carries the motion model and per-carrier s
 <br>
 
 ### Horizontal Ferry
-Lateral transfer between parallel sections; routing rules across its ports, geometry scaled to
-section width.
+Lateral transfer between parallel sections via routing rules across 4 defined ports.
 
 <div align="center">
   <img src="02_Component_and_Variant_Modelling/Horizontal_Ferry/FTSHorizontal_Ferry_Component_graph.png" alt="Ferry component graph" width="550"/>
@@ -167,33 +169,48 @@ section width.
 
 <br>
 
+### NYCe Controller
+The NYCe Controller controls carrier movement and collision avoidance. It houses the carrier
+control modes - Setpoint Generator and Servo Controller that drive per-carrier motion (see
+[3.3 Link-Based](#33-link-based-adopted)), and the central collision-avoidance supervisor (see
+[4. Collision Avoidance](#4-collision-avoidance)).
+
+<div align="center">
+  <img src="02_Component_and_Variant_Modelling/NYCe_Controller/NYCe_Controller.png" alt="NYCe Controller component" width="550"/>
+</div>
+
+<div align="center">
+  <i>Figure 12: NYCe Controller component modelled in VC</i>
+</div>
+
+<br>
+
 ---
 
-## 3. Behaviour Modelling - three approaches
+## 3. Behaviour Modelling
 
-Per-carrier motion was prototyped three ways. They coexist; the **path-based** approaches serve
-layout and throughput studies, while the **Link-Based** approach is the adopted production
-architecture for timing-accurate simulation and virtual commissioning. They are presented below in
-increasing fidelity, ending on the Link-Based servo controller mode that the collision avoidance in
-§4 builds on.
+Three approaches to modelling per-carrier motion were evaluated to find which best represents the FTS,
+whose carriers move independently along the track. The **path-based** approaches model carriers as
+products on VC paths; the **Link-Based** approach drives each carrier through its own joint and was
+adopted, as it most faithfully captures the FTS's independent, motion and supports external control. The sections below build up to the Link-Based servo controller mode that the collision avoidance relies on.
 
 <div align="center">
   <img src="03_Behaviour_Modelling/Behaviour_modelling%20approaches.png" alt="Behaviour modelling approaches" width="550"/>
 </div>
 
 <div align="center">
-  <i>Figure 12: Overview of the three behaviour-modelling approaches</i>
+  <i>Figure 13: Overview of the three behaviour-modelling approaches</i>
 </div>
 
 <br>
 
 <div align="center">
 
-| Approach | Carrier modelled as | Independent velocity | Opposing motion on one section | Inter-carrier blocking | Best for |
-|---|---|---|---|---|---|
-| **Dynamic Path-Based** | Product flowing on VC path behaviour(s); position parameterised by path distance | Per-path | Limited | Within a single path | Throughput / layout studies |
-| **VC Path-Based** | Product on VC path(s), one path per carrier | Per-path override | No | Breaks across separate paths* | Quick layout sketches |
-| **Link-Based** | Component with a Custom DOF translational joint, driven by `vcServoController` setpoints | Yes (one joint per carrier) | Yes | Centralised supervisor (see §4) | Timing-accurate simulation, virtual commissioning |
+| Approach | Carrier modelled as | Pros | Cons |
+|---|---|---|---|
+| **Dynamic Path-Based** | Product flowing on a shared VC path; position parameterised by path distance | Inter-carrier blocking handled natively within the path (`Accumulate` / `SpaceUtilisation`); quick to set up | Velocity is per-path, not per-carrier; no simultaneous opposite-direction motion on a section |
+| **VC Path-Based** | Product on VC paths, one path per carrier | Per-carrier velocity via `PathVelocity` overrides | Separate paths break inter-carrier blocking (`Accumulate` / `SpaceUtilisation` are per-path); no opposing motion |
+| **Link-Based** | Component with a Custom-DOF translational joint driven by `vcServoController` | True independent speed / acceleration / direction per carrier; opposing motion supported; collision avoidance via central supervisor (4); enables virtual commissioning | More setup; inter-carrier blocking relies on the central supervisor rather than native path behaviours |
 
 </div>
 
@@ -201,28 +218,30 @@ increasing fidelity, ending on the Link-Based servo controller mode that the col
 path, so inter-carrier blocking is not captured - documented as a known limitation.
 
 ### 3.1 Dynamic Path-Based
+Carriers are modelled as products flowing on a single shared VC path, with each carrier's position parameterised by its distance along the path.
 <div align="center">
   <img src="03_Behaviour_Modelling/02_Dynamic_Path_Based/Dynamic_Path_based.png" alt="Dynamic path-based" width="550"/>
 </div>
 
 <div align="center">
-  <i>Figure 13: Dynamic path-based carrier movement</i>
+  <i>Figure 14: Dynamic path-based carrier movement</i>
 </div>
 
 <br>
 
 ### 3.2 VC Path-Based
+Each carrier runs on its own dedicated VC path, enabling per-carrier velocity through `PathVelocity` overrides.
 <div align="center">
   <img src="03_Behaviour_Modelling/02_Dynamic_Path_Based/VC_path_based.gif" alt="VC path-based demo" width="550"/>
 </div>
 
 <div align="center">
-  <i>Figure 14: VC single path and multiple path-based Carrier movement demo</i>
+  <i>Figure 15: VC single path and multiple path-based Carrier movement demo</i>
 </div>
 
 <br>
 
-### 3.3 Link-Based (adopted)
+### 3.3 Link-Based
 Carrier = component with its own translational joint; `vcServoController` runs the trapezoidal
 profile, giving true independent speed / acceleration / direction per carrier.
 
@@ -276,7 +295,7 @@ controllable motion.
 </div>
 
 <div align="center">
-  <i>Figure 15: Setpoint generator demo - station profile compiled into motion</i>
+  <i>Figure 16: Setpoint generator demo - station profile compiled into motion</i>
 </div>
 
 <br>
@@ -312,7 +331,7 @@ Example station profile - [`StationProfile.csv`](03_Behaviour_Modelling/01_Link_
 </div>
 
 <div align="center">
-  <i>Figure 16: Station Profile CSV Import Add-on</i>
+  <i>Figure 17: Station Profile CSV Import Add-on</i>
 </div>
 
 <br>
@@ -322,7 +341,7 @@ Example station profile - [`StationProfile.csv`](03_Behaviour_Modelling/01_Link_
 </div>
 
 <div align="center">
-  <i>Figure 17: Servo controller mode architecture</i>
+  <i>Figure 18: Servo controller mode architecture</i>
 </div>
 
 <br>
@@ -332,7 +351,7 @@ Example station profile - [`StationProfile.csv`](03_Behaviour_Modelling/01_Link_
 </div>
 
 <div align="center">
-  <i>Figure 18: Servo controller based carrier movement demo</i>
+  <i>Figure 19: Servo controller based carrier movement demo</i>
 </div>
 
 <br>
@@ -354,7 +373,7 @@ windows advance. This keeps carriers from converging on the same track segment.
 </div>
 
 <div align="center">
-  <i>Figure 19: Collision avoidance architecture</i>
+  <i>Figure 20: Collision avoidance architecture</i>
 </div>
 
 <br>
@@ -364,7 +383,7 @@ windows advance. This keeps carriers from converging on the same track segment.
 </div>
 
 <div align="center">
-  <i>Figure 20: Centralised supervisor logic</i>
+  <i>Figure 21: Centralised supervisor logic</i>
 </div>
 
 <br>
@@ -374,7 +393,7 @@ windows advance. This keeps carriers from converging on the same track segment.
 </div>
 
 <div align="center">
-  <i>Figure 21: Collision avoidance demo tail to head scenario</i>
+  <i>Figure 22: Collision avoidance demo tail to head scenario</i>
 </div>
 
 <br>
@@ -384,7 +403,7 @@ windows advance. This keeps carriers from converging on the same track segment.
 </div>
 
 <div align="center">
-  <i>Figure 22: Collision avoidance demo head-on scenario</i>
+  <i>Figure 23: Collision avoidance demo head-on scenario</i>
 </div>
 
 <br>
@@ -406,7 +425,7 @@ Two families of statistics run on top of the simulation:
 </div>
 
 <div align="center">
-  <i>Figure 23: Statistics analysis Overview</i>
+  <i>Figure 24: Statistics analysis Overview</i>
 </div>
 
 <br>
@@ -416,7 +435,7 @@ Two families of statistics run on top of the simulation:
 </div>
 
 <div align="center">
-  <i>Figure 24: Eg. FTS demo for Statistical analysis</i>
+  <i>Figure 25: Eg. FTS demo for Statistical analysis</i>
 </div>
 
 <br>
@@ -426,14 +445,15 @@ Two families of statistics run on top of the simulation:
 </div>
 
 <div align="center">
-  <i>Figure 25: Example Statistics</i>
+  <i>Figure 26: Example Statistics</i>
 </div>
 
 <br>
 
 ---
+## 6 Add-Ons
 
-## 6. Drive-Sizing Tool Project DPF Import Add-On
+### 6.1 Drive-Sizing Tool Project DPF Import Add-On
 
 A Visual Components add-on that imports a **`.dpf` project file** exported from the Bosch Rexroth
 **Drive Sizing Tool** and applies the selected motor/drive configuration onto the matching FTS
@@ -445,7 +465,7 @@ dimensioning and the simulation model.
 </div>
 
 <div align="center">
-  <i>Figure 26: Drive-Sizing DPF import flow</i>
+  <i>Figure 27: Drive-Sizing DPF import flow</i>
 </div>
 
 <br>
@@ -454,29 +474,23 @@ Implementation notes: VC add-on environment (Python 2.7 / IronPython); native fi
 `URI` property in a command panel; components filtered by an `FTS_Component` property gate before
 any change is applied.
 
----
+### 6.2 Setpoint Generator Tool
+Define station parameters in a template station-profile CSV, then import it with the Setpoint
+Generator Tool to compile a time-sampled setpoints file that the carrier replays (see
+[3.3 Setpoint-Based Generator](#setpoint-based-generator)).
 
-## 7. Tools & Stack
-
-<div align="center">
-
-| Area | Tools |
-|---|---|
-| Simulation | Visual Components 5.0 Premium |
-| Scripting API | Python 3, Python 2.7 |
-| FTS System control | NYCe4000 software stack, Bosch Rexroth Drive Sizing Tool |
-| Connectivity | OPC UA, ctrlX CORE|
-
-</div>
+### 6.3 Station Profile Import
+Imports a station profile with per-move velocity, acceleration, and deceleration limits for
+Servo Controller mode (see [3.3 Servo Controller Mode](#servo-controller-mode)).
 
 ---
 
-## 8. Virtual Commissioning (in progress)
+## 7. Virtual Commissioning (in progress)
 
 Extends the model to a digital twin: an external control service owns carrier motion and VC
 animates streamed positions (internal supervisor bypassed). Connectivity options under
-evaluation: OPC UA vs. TCP socket. *Coming soon.*
+evaluation: OPC UA vs. TCP socket.
 
 ---
 
-<sub>Library development still in progress for external NYCe 4000 based control</sub>
+<sub>Library development still in progress</sub>
