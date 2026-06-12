@@ -66,9 +66,11 @@ collision avoidance, statistical analysis, and developed AddOns.
       - [Servo Controller Mode](#servo-controller-mode)
   - [4. Collision Avoidance](#4-collision-avoidance)
   - [5. Statistics Analysis](#5-statistics-analysis)
-  - [6. Drive-Sizing Tool Project DPF Import Add-On](#6-drive-sizing-tool-project-dpf-import-add-on)
-  - [7. Tools \& Stack](#7-tools--stack)
-  - [8. Virtual Commissioning (in progress)](#8-virtual-commissioning-in-progress)
+  - [6 Add-Ons](#6-add-ons)
+    - [6.1 Drive-Sizing Tool Project DPF Import Add-On](#61-drive-sizing-tool-project-dpf-import-add-on)
+    - [6.2 Setpoint Generator Tool](#62-setpoint-generator-tool)
+    - [6.3 Station Profile Import](#63-station-profile-import)
+  - [7. Virtual Commissioning (in progress)](#7-virtual-commissioning-in-progress)
 
 ---
 
@@ -449,8 +451,9 @@ Two families of statistics run on top of the simulation:
 <br>
 
 ---
+## 6 Add-Ons
 
-## 6. Drive-Sizing Tool Project DPF Import Add-On
+### 6.1 Drive-Sizing Tool Project DPF Import Add-On
 
 A Visual Components add-on that imports a **`.dpf` project file** exported from the Bosch Rexroth
 **Drive Sizing Tool** and applies the selected motor/drive configuration onto the matching FTS
@@ -471,29 +474,23 @@ Implementation notes: VC add-on environment (Python 2.7 / IronPython); native fi
 `URI` property in a command panel; components filtered by an `FTS_Component` property gate before
 any change is applied.
 
----
+### 6.2 Setpoint Generator Tool
+Define station parameters in a template station-profile CSV, then import it with the Setpoint
+Generator Tool to compile a time-sampled setpoints file that the carrier replays (see
+[3.3 Setpoint-Based Generator](#setpoint-based-generator)).
 
-## 7. Tools & Stack
-
-<div align="center">
-
-| Area | Tools |
-|---|---|
-| Simulation | Visual Components 5.0 Premium |
-| Scripting API | Python 3, Python 2.7 |
-| FTS System control | NYCe4000 software stack, Bosch Rexroth Drive Sizing Tool |
-| Connectivity | OPC UA, ctrlX CORE|
-
-</div>
+### 6.3 Station Profile Import
+Imports a station profile with per-move velocity, acceleration, and deceleration limits for
+Servo Controller mode (see [3.3 Servo Controller Mode](#servo-controller-mode)).
 
 ---
 
-## 8. Virtual Commissioning (in progress)
+## 7. Virtual Commissioning (in progress)
 
 Extends the model to a digital twin: an external control service owns carrier motion and VC
 animates streamed positions (internal supervisor bypassed). Connectivity options under
-evaluation: OPC UA vs. TCP socket. *Coming soon.*
+evaluation: OPC UA vs. TCP socket.
 
 ---
 
-<sub>Library development still in progress for external NYCe 4000 based control</sub>
+<sub>Library development still in progress</sub>
