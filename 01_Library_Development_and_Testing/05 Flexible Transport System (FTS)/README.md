@@ -66,11 +66,11 @@ collision avoidance, statistical analysis, and developed AddOns.
       - [Servo Controller Mode](#servo-controller-mode)
   - [4. Collision Avoidance](#4-collision-avoidance)
   - [5. Statistics Analysis](#5-statistics-analysis)
-  - [6 Add-Ons](#6-add-ons)
+  - [6. Add-Ons](#6-add-ons)
     - [6.1 Drive-Sizing Tool Project DPF Import Add-On](#61-drive-sizing-tool-project-dpf-import-add-on)
     - [6.2 Setpoint Generator Tool](#62-setpoint-generator-tool)
     - [6.3 Station Profile Import](#63-station-profile-import)
-  - [7. Virtual Commissioning (in progress)](#7-virtual-commissioning-in-progress)
+  - [7. Virtual Commissioning](#7-virtual-commissioning)
 
 ---
 
@@ -327,21 +327,21 @@ Example station profile - [`StationProfile.csv`](03_Behaviour_Modelling/01_Link_
 <br>
 
 <div align="center">
-  <img src="06_AddOns/Station_profile_import_AddOn/StationProfile_import.png" alt="Station profile import add-on" width="550"/>
+  <img src="03_Behaviour_Modelling/01_Link_Based/Servo%20Controller%20mode/ServoControllerMode.png" alt="Servo controller mode architecture" width="550"/>
 </div>
 
 <div align="center">
-  <i>Figure 17: Station Profile CSV Import Add-on</i>
+  <i>Figure 17: Servo controller mode architecture</i>
 </div>
 
 <br>
 
 <div align="center">
-  <img src="03_Behaviour_Modelling/01_Link_Based/Servo%20Controller%20mode/ServoControllerMode.png" alt="Servo controller mode architecture" width="550"/>
+  <img src="06_AddOns/Station_profile_import_AddOn/StationProfile_import.png" alt="Station profile import add-on" width="550"/>
 </div>
 
 <div align="center">
-  <i>Figure 18: Servo controller mode architecture</i>
+  <i>Figure 18: Station Profile CSV Import Add-on</i>
 </div>
 
 <br>
@@ -451,7 +451,7 @@ Two families of statistics run on top of the simulation:
 <br>
 
 ---
-## 6 Add-Ons
+## 6. Add-Ons
 
 ### 6.1 Drive-Sizing Tool Project DPF Import Add-On
 
@@ -485,7 +485,7 @@ Servo Controller mode (see [3.3 Servo Controller Mode](#servo-controller-mode)).
 
 ---
 
-## 7. Virtual Commissioning (in progress)
+## 7. Virtual Commissioning
 
 Extends the model to a digital twin: an external control service owns carrier motion and VC
 animates streamed positions (internal supervisor bypassed). Connectivity options under
