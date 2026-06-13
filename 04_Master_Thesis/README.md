@@ -8,7 +8,7 @@ This thesis develops and validates an **engineering data logistics pipeline** th
 
 The prototype is realized for Bosch Rexroth **Transfer System 2 (TS2)** components, and the generated wiring plans are validated against a real Bosch Rexroth TS2 reference project, confirming structural correspondence at the page, device, and connection levels.
 
-## Motivation & Problem
+## Motivation & Problem Statement
 
 In Bosch Rexroth's digital engineering toolchain, the transition from mechanical layout planning (Visual Components) to electrical wiring design (EPLAN Electric P8) is **not automated**. The two tools use proprietary, non-harmonised data models with no neutral interface, so wiring diagrams are authored manually, which increases engineering effort and produces inconsistencies between the simulation model and the wiring plan.
 
@@ -51,7 +51,7 @@ Implementation scope is limited to four representative TS2 components and a stan
 
 <br/>
 
-### Technologies Used
+### Software Stack
 
 - **Simulation Platform:** Visual Components 4.10 (Python 2.7 scripting for custom AddOns)
 - **ECAD:** EPLAN Electric P8 (with designer license), eBuild (Library Designer, Project Generation)
@@ -59,7 +59,7 @@ Implementation scope is limited to four representative TS2 components and a stan
 - **Data exchange format:** AutomationML (CAEX 3.0), JSON, XML
 - **Data logistics pipeline:** Streamlit-based Python implementation (extended PPR-AML tool)
 
-## Concept: Common Concept Model & 5-Stage Pipeline
+## Methodology
 
 Three domains are unified through the CCM: the **Simulation** domain (Visual Components) and **PPR** domain (Product-Process-Resource description of the production system) are upstream *source* domains, from which the downstream **Wiring planning** domain (EPLAN) is *derived*. The CCM is serialised as AutomationML and embeds three rule categories: **Common Concept Identification (CCI)**, **cross-domain attribute mapping**, and **roundtrip mapping**.
 
@@ -231,7 +231,7 @@ The PPR (Product-Process-Resource) diagram below describes the same production s
 
 <br/>
 
-## Results
+## Results & Evaluation
 
 From the integrated common data model (the single source of truth consolidating the VC, PPR, and derived wiring-planning data), the pipeline generated a complete EPLAN project, with schematic pages organised under structure identifiers (cabinet, machine, pneumatic) and parts lists, for every in-scope component instance, including correct device placement and connection resolution.
 
