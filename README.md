@@ -9,7 +9,7 @@
 
 ## 🎯 Featured Projects
 
-### 1. [Library Development & Testing](./01_Library_Development%20and%20Testing)
+### 1. [Library Development & Testing](./01_Library_Development_and_Testing)
 Bosch Rexroth transfer systems, component modelling, and validation across TS1, TS2, VarioFlow Belt, TS1 Evo, and performance evaluation.
 
 ### 2. [Virtual Commissioning](./02_Virtual_Commissioning)
