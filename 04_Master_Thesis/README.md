@@ -66,7 +66,7 @@ Three domains are unified through the CCM: the **Simulation** domain (Visual Com
 The generalised engineering data logistics architecture organises these domains into data sources (Simulation and PPR), a central transformation and integration stage built around the Common Data Model, and a data sink (the Wiring planning domain), with a roundtrip path feeding generated attributes back to the source. The architecture is tool-independent: each domain exchanges data through neutral AutomationML models.
 
 <div align="center">
-  <img src="Generalised EDL architecture.png" alt="Generalised engineering data logistics architecture" width="760"/>
+  <img src="Generalised EDL architecture.svg" alt="Generalised engineering data logistics architecture" width="900"/>
 </div>
 <div align="center">
   <i>Figure 3: Generalised tool-independent engineering data logistics architecture (data source, transformation and integration, data sink, with roundtrip)</i>
@@ -137,7 +137,7 @@ A custom model-export AddOn exports the component hierarchy, electrical metadata
 The pipeline is realised as the **extended PPR-AML tool**, which adds cross-domain attribute mapping, VC/EPLAN input handlers, an EPLAN eBuild configuration-template mapper, and bidirectional roundtrip exchange to the DIAMOND-based baseline tool.
 
 <div align="center">
-  <img src="Tool-specific EDL architecture.png" alt="Tool-specific engineering data logistics architecture" width="700"/>
+  <img src="Tool-specific EDL architecture.svg" alt="Tool-specific engineering data logistics architecture" width="900"/>
 </div>
 <div align="center">
   <i>Figure 8: Tool-specific overall engineering data logistics architecture (DIAMOND backbone integrating the VC, PPR and EPLAN views)</i>
@@ -145,13 +145,24 @@ The pipeline is realised as the **extended PPR-AML tool**, which adds cross-doma
 
 <br/>
 
+Internally, the tool realises three processing layers: each input artefact is first normalised into a uniform intermediate representation (**ViewsDataModel**), then transformed into a domain-specific **AML-2** model; the **Integrator** consolidates these into a unified **central data model** that serves as the single source of truth for generating the integrated AML, the wiring-plan configuration, and the roundtrip data.
+
+<div align="center">
+  <img src="Data flow architecture.svg" alt="Tool-specific data flow architecture of the extended PPR-AML tool" width="500"/>
+</div>
+<div align="center">
+  <i>Figure 9: Tool-specific data flow architecture of the extended PPR-AML tool: inputs and the CCM are normalised into a uniform ViewsDataModel, transformed into domain-specific AML-2 models, and consolidated by the Integrator into a unified central data model that drives the integrated AML, wiring-plan configuration, and roundtrip outputs</i>
+</div>
+
+<br/>
+
 The tool consumes the domain-specific data models (VC JSON, PPR Excel), the Common Concept Model, the Identification View, and the eBuild configuration template, and produces the per-domain AML models, the integrated AML model, and the eBuild configurator file.
 
 <div align="center">
-  <img src="PPR-AML tool artefacts.png" alt="PPR-AML tool input and output data artefacts" width="950"/>
+  <img src="PPR-AML tool artefacts.svg" alt="PPR-AML tool input and output data artefacts" width="950"/>
 </div>
 <div align="center">
-  <i>Figure 9: Input and output data artefacts of the extended PPR-AML tool</i>
+  <i>Figure 10: Input and output data artefacts of the extended PPR-AML tool</i>
 </div>
 
 <br/>
@@ -160,7 +171,7 @@ The tool consumes the domain-specific data models (VC JSON, PPR Excel), the Comm
   <img src="DIAMOND Engineering Data Logistics Streamlit web app.png" alt="DIAMOND EDL Streamlit app" width="950"/>
 </div>
 <div align="center">
-  <i>Figure 10: Extended PPR-AML tool: DIAMOND engineering data logistics Streamlit app</i>
+  <i>Figure 11: Extended PPR-AML tool: DIAMOND engineering data logistics Streamlit app</i>
 </div>
 
 <br/>
@@ -171,7 +182,7 @@ The discipline-specific AML models (VC, PPR, EPLAN) are integrated into a single
   <img src="Unified AML model.png" alt="Unified AML model from discipline-specific AML models" width="650"/>
 </div>
 <div align="center">
-  <i>Figure 11: Unified AML model integrated from the discipline-specific AML models</i>
+  <i>Figure 12: Unified AML model integrated from the discipline-specific AML models</i>
 </div>
 
 <br/>
@@ -182,7 +193,7 @@ In the eBuild generation tab, the integrated AutomationML model is mapped to the
   <img src="eBuild configuration mapper.png" alt="eBuild configuration mapper tab of the extended PPR-AML tool" width="950"/>
 </div>
 <div align="center">
-  <i>Figure 12: eBuild configuration mapper (Integration tab) of the extended PPR-AML tool</i>
+  <i>Figure 13: eBuild configuration mapper (Integration tab) of the extended PPR-AML tool</i>
 </div>
 
 <br/>
@@ -191,7 +202,7 @@ In the eBuild generation tab, the integrated AutomationML model is mapped to the
   <img src="Eg.Generated eBUILD Config.png" alt="Generated eBuild configuration" width="650"/>
 </div>
 <div align="center">
-  <i>Figure 13: Generated eBuild XML configuration for a TS2 Conveyor Unit, mapped from the DIAMOND backbone</i>
+  <i>Figure 14: Generated eBuild XML configuration for a TS2 Conveyor Unit, mapped from the DIAMOND backbone</i>
 </div>
 
 <br/>
@@ -201,10 +212,10 @@ In the eBuild generation tab, the integrated AutomationML model is mapped to the
 The pipeline was applied end-to-end to a representative TS2 **production system** (an ECU-housing / PCB assembly line built from the in-scope TS2 components), as well as to a smaller example simulation system.
 
 <div align="center">
-  <img src="Example production system.png" alt="Example production system in Visual Components" width="620"/>
+  <img src="Example production system.png" alt="Example production system in Visual Components" width="500"/>
 </div>
 <div align="center">
-  <i>Figure 14: Example TS2 production system modelled in Visual Components</i>
+  <i>Figure 15: Example TS2 production system modelled in Visual Components</i>
 </div>
 
 <br/>
@@ -212,10 +223,10 @@ The pipeline was applied end-to-end to a representative TS2 **production system*
 The PPR (Product-Process-Resource) diagram below describes the same production system formally, capturing the products, processes, and the TS2 resources that execute them. This PPR view is one of the upstream source domains consumed by the pipeline, providing the production-system context that the simulation domain alone does not represent.
 
 <div align="center">
-  <img src="PPR diagram production system.png" alt="PPR diagram of the example production system" width="560"/>
+  <img src="PPR diagram production system.svg" alt="PPR diagram of the example production system" width="560"/>
 </div>
 <div align="center">
-  <i>Figure 15: PPR diagram of the example production system (green: Product, red: Process, grey: Resource)</i>
+  <i>Figure 16: PPR diagram of the example production system (green: Product, red: Process, grey: Resource)</i>
 </div>
 
 <br/>
@@ -227,10 +238,12 @@ From the integrated common data model (the single source of truth consolidating 
 A comparative analysis against an existing Bosch Rexroth TS2 reference project confirmed **structural correspondence at the page, device, and connection levels**, including cross-references across pages. Differences are limited to instance-specific attribute values and project-specific naming conventions. Pages outside the defined scope (power distribution, AP-bus topology, PLC, compressed-air) appear as disconnected endpoints by design, leaving the generated mechatronic device layer to be connected during detailed electrical design.
 
 <div align="center">
-  <img src="Reference vs generated schematic.png" alt="Reference vs generated conveyor drive schematic" width="560"/>
+  <img src="Reference schematic.png" alt="Reference TS2 project conveyor drive schematic" width="560"/>
+  <br/><br/>
+  <img src="Eg. Generated schematics.png" alt="Automatically generated conveyor drive schematic" width="560"/>
 </div>
 <div align="center">
-  <i>Figure 16: Reference TS2 project schematic (top) vs the automatically generated schematic (bottom) for a conveyor drive</i>
+  <i>Figure 17: Reference TS2 project schematic (top) vs the automatically generated schematic (bottom) for a conveyor drive</i>
 </div>
 
 <br/>
@@ -243,5 +256,5 @@ Because every concept carries a shared asset identifier across the domain views,
   <img src="Roundtrip mapping.png" alt="EPLAN data mapped back to VC after roundtrip" width="620"/>
 </div>
 <div align="center">
-  <i>Figure 17: EPLAN domain attributes mapped back onto a VC component before (left) and after (right) roundtrip</i>
+  <i>Figure 18: EPLAN domain attributes mapped back onto a VC component before (left) and after (right) roundtrip</i>
 </div>
